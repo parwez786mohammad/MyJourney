@@ -74,8 +74,8 @@ header {
     }
 }
 .profile-img {
-    width: 200px;
-    height: 200px;
+    width: 250px;
+    height: 250px;
     border-radius: 50%; /* Makes it circular */
     margin-bottom: 20px;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Adds a shadow for depth */
@@ -610,5 +610,35 @@ section {
         width: 25px;
         height: 25px;
         font-size: 1rem;
+    }
+}
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+/* Add mobile menu toggle */
+.mobile-menu-toggle {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .mobile-menu-toggle {
+        display: block;
+        position: fixed;
+        top: 15px;
+        right: 15px;
+        z-index: 1000;
+    }
+    
+    nav ul {
+        display: none;
+        position: fixed;
+        top: 60px;
+        left: 0;
+        right: 0;
+        background: #4ecdc4;
+    }
+    
+    nav ul.active {
+        display: flex;
     }
 }
