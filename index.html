@@ -8,6 +8,33 @@
 	<link rel="stylesheet" href="/MyJourney/Styles.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
+	
+// Add to all pages
+function toggleMenu() {
+    const nav = document.getElementById('main-nav');
+    const menu = nav.querySelector('ul');
+    menu.classList.toggle('active');
+}
+
+// Close menu when clicking outside
+document.addEventListener('click', function(event) {
+    const nav = document.getElementById('main-nav');
+    const menu = nav.querySelector('ul');
+    const toggleBtn = document.querySelector('.mobile-menu-toggle');
+    
+    if (!nav.contains(event.target) {
+        menu.classList.remove('active');
+    }
+});
+
+// Close menu after clicking a link
+document.querySelectorAll('nav#main-nav a').forEach(link => {
+    link.addEventListener('click', () => {
+        document.querySelector('nav#main-nav ul').classList.remove('active');
+    });
+});
+
+	
 <body>
     <!-- Header -->
     <header>
