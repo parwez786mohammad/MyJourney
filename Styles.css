@@ -1,0 +1,505 @@
+/* Reset & Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', Arial, sans-serif;
+}
+
+body {
+    line-height: 1.6;
+    color: #333;
+    background: #f9f9f9;
+}
+
+.container {
+    width: 85%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Header */
+/* Header */
+header {
+    background: #2c3e50;
+    color: white;
+    padding: 25px 0; /* Reduced padding */
+}
+
+.header-content {
+    width: 85%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center; /* Vertical alignment */
+    gap: 30px; /* Space between image and text */
+}
+
+.profile-img {
+    width: 120px; /* Reduced size */
+    height: 120px;
+    border-radius: 50%;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.header-text h1 {
+    font-size: 1.8rem; /* Smaller heading */
+    margin-bottom: 8px;
+}
+
+.header-text p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+    
+    .profile-img {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .header-text h1 {
+        font-size: 1.5rem;
+    }
+}
+.profile-img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%; /* Makes it circular */
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Adds a shadow for depth */
+}
+
+/* Navigation */
+nav {
+    background: #4ecdc4;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 15px 0;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: black;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: all 0.3s;
+}
+
+nav ul li a:hover {
+    background: #2c3e50;
+    color: white;
+}
+
+/* Sections */
+.section {
+    padding: 60px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.section h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #2c3e50;
+    font-size: 2rem;
+}
+
+/* Cards and Grids */
+.card, .project-card, .video-card, .blog-post {
+    background: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 800px;
+}
+
+.card-grid, .video-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.timeline-item {
+    background: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 800px;
+}
+
+.date {
+    color: #7f8c8d;
+    font-size: 0.9rem;
+    margin: 10px 0;
+}
+
+.read-more {
+    color: #3498db;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+/* Project Cards Expand/Collapse -------------------------------------------------------*/
+.project-card .summary {
+    display: block;
+}
+
+.project-card .details {
+    display: none;
+    padding-top: 15px;
+    border-top: 1px solid #eee;
+    margin-top: 15px;
+}
+
+.project-card .details.visible {
+    display: block;
+}
+
+.project-card .summary.hidden {
+    display: none;
+}
+
+.toggle-btn {
+    background: #4ecdc4;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: all 0.3s;
+}
+
+.toggle-btn:hover {
+    background: #2c3e50;
+}
+
+.project-card ul {
+    margin: 10px 0;
+    padding-left: 20px;
+}
+
+.project-card h4 {
+    color: #2c3e50;
+    margin: 15px 0 10px;
+}
+
+/* 2 Cards Per Row */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Pagination */
+.pagination {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.pagination button {
+    padding: 8px 20px;
+    background: #4ecdc4;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.pagination button:hover {
+    background: #2c3e50;
+}
+
+.pagination button:disabled {
+    background: #bdc3c7;
+    cursor: not-allowed;
+}
+
+.page-indicator {
+    color: #2c3e50;
+    font-weight: bold;
+}
+
+.page {
+    display: none;
+}
+
+.page.active {
+    display: block;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .card-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Career Timeline Styles -------------------------------------------------------*/
+.timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+/* Career page specific styles */
+.career-page .timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    width: 2px;
+    height: 100%;
+    background: #4ecdc4;
+    transform: translateX(-50%);
+}
+
+.career-page .timeline-item {
+    position: relative;
+    width: 100%;
+    margin-bottom: 40px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.timeline-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background: #f8f9fa;
+    border-radius: 8px 8px 0 0;
+    cursor: pointer;
+}
+
+.timeline-date {
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+.timeline-details {
+    max-height: 0;
+    overflow: hidden;
+    padding: 0 20px;
+    transition: all 0.3s ease;
+}
+
+.career-page .timeline-details.expanded {
+    max-height: 500px;
+    padding: 20px;
+    border-top: 2px solid #4ecdc4;
+}
+
+/* Career Timeline Styles */
+.CareerToggleButton {
+    background: none;
+    border: 2px solid #4ecdc4;
+    color: #4ecdc4;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+
+.CareerToggleButton:hover {
+    background: #4ecdc4;
+    color: white;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .timeline::before {
+        left: 20px;
+    }
+    
+    .timeline-item {
+        width: calc(100% - 40px);
+        margin-left: 40px;
+    }
+    
+    .timeline-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .timeline-date {
+        margin-bottom: 10px;
+    }
+}
+
+/* YouTube Videos -------------------------------------------------------*/
+.video-grid iframe {
+    width: 100%;
+    border-radius: 5px;
+}
+
+/* Contact Section -------------------------------------------------------*/
+.social-links {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.social-links a {
+    color: #2c3e50;
+    font-size: 1.5rem;
+    margin: 0 15px;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: #3498db;
+}
+
+/* Footer -------------------------------------------------------*/
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background: #34495e;
+    color: white;
+    width: 100%;
+}
+
+/* Responsive Design -------------------------------------------------------*/
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .profile-img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .card, .project-card, .video-card, .blog-post, .timeline-item {
+        width: 90%;
+    }
+
+    .card-grid, .video-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Details and Summary -------------------------------------------------------*/
+details {
+    border: none;
+    margin-bottom: 20px;
+}
+
+summary {
+    cursor: pointer;
+    font-weight: bold;
+    padding: 10px;
+    background: #f9f9f9;
+    border-radius: 5px;
+}
+
+summary::-webkit-details-marker {
+    display: none;
+}
+
+summary::after {
+    content: " [+]";
+    margin-left: 10px;
+}
+
+details[open] summary::after {
+    content: " [-]";
+}
+
+/* styles.css - Add these updates */
+/* Ensure these are the last CSS rules */
+.project-card .summary {
+    display: block;
+    transition: all 0.3s ease;
+}
+
+.project-card .details {
+    display: none;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.project-card .details.visible {
+    display: block;
+    opacity: 1;
+}
+
+.project-card .summary.hidden {
+    display: none;
+    opacity: 0;
+}
+
+/* Pagination text alignment */
+.page-indicator {
+    margin: 0 15px;
+    font-size: 1.1rem;
+}
+
+/* Ensure footer stays at bottom */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+section {
+    flex: 1;
+}
+
+/* Fix project card alignment */
+.project-card {
+    height: auto !important;
+    min-height: 200px;
+}
+
+/* Pagination positioning */
+.pagination-container {
+    position: static;
+    margin-top: auto;
+}

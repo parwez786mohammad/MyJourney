@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Add to HTML head -->
+<style>
+    /* Career page specific styles */
+    .career-page .CareerToggleButton {
+        background: none;
+        border: 2px solid #4ecdc4;
+        color: #4ecdc4;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        font-size: 1.2rem;
+        font-weight: bold;
+        transition: all 0.3s;
+        cursor: pointer;
+    }
+
+    .career-page .timeline-details {
+        max-height: 0;
+        overflow: hidden;
+        padding: 0 20px;
+        transition: all 0.3s ease;
+    }
+</style>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mohammad Parwez | My Journey</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+	
+</head>
+<body>
+    <!-- Header -->
+	<body class="career-page">
+    <header>
+        <div class="header-content">
+            <img src="Images/profile.jpeg" alt="Profile" class="profile-img">
+            <div class="header-text">
+                <h1>Mohammad Parwez</h1>
+                <p>Project Manager / An Automation Geek</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Me</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="career.html">My Journey</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="videos.html">Videos</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Career Timeline Section -->
+    <section id="career" class="section">
+        <div class="container">
+            <h2>My Professional & Personal Journey</h2>
+            <div class="timeline">
+
+			<!-- Born -->
+                <div class="timeline-item">
+                    <div class="timeline-header">
+                        <span class="timeline-date">16/11/1993</span>
+                        <h3>My Birthday</h3>
+						<button class="CareerToggleButton" onclick="toggleCareerTimeline(this)">+</button>
+                    </div>
+                    <div class="timeline-details">
+                        <p><h4>Humble Beginnings</h4></p><br>
+                        <ul>
+                            <li>I was born in Sareya, a small village in the Gopalganj district of Bihar. Growing up in a modest rural setting, I was shaped by the values of hard work, resilience, and perseverance. Life in the village was simple yet challenging, instilling in me the determination to rise above circumstances and carve my own path.</li>
+                            <li>In my family, I am the second child and the first son among six siblings. Education was a distant dream, not just for my family but for most families in our village—both Hindu and Muslim. The prevailing mindset prioritized survival over schooling. Many families believed that having more children meant greater strength in numbers, ensuring they could defend their land in case of disputes. Conflicts were often settled with lathis rather than words or law, as people fought to protect their homes and livelihoods.</li>
+							<li>Over time, a change in perspective began to spread. More people in our village started valuing education, and as a result, Sareya became one of the most educated villages in the region. This transformation paved the way for the next generation, offering them opportunities that once seemed impossible. While there is still much to improve, I have faith that progress will continue, and the seeds of change will flourish even further.</li>
+                        </ul>
+                    </div>
+                </div>
+
+			<!-- Early Childhood days -->
+                <div class="timeline-item">
+                    <div class="timeline-header">
+                        <span class="timeline-date">1996 - 1998</span>
+                        <h3>Early Education</h3>
+						<button class="CareerToggleButton" onclick="toggleCareerTimeline(this)">+</button>
+                    </div>
+                    <div class="timeline-details">
+                        <p><h4>Madrasha Education</h4></p><br>
+                        <ul>
+                            <li>During my early years, with no one educated in my family, my mother taught me whatever she knew about Islam and prayers. She instilled in me the basics of duas and encouraged me to learn more. Recognizing the importance of education, she started sending me to our village madrasa.</li>
+                            <li>At the madrasa, I was introduced to Islamic teachings and learned to read Arabic. I had a keen ability to grasp new concepts quickly, which caught the attention of the madrasa's Moulvi. Impressed by my learning skills, he advised my parents to enroll me in a formal school. Taking his advice, my father decided to send me to a small school run by just two teachers, where they taught all subjects from Nursery to Class VI.</li>
+                        </ul>
+                    </div>
+                </div>
+				
+				<!-- Primary School -->
+                <div class="timeline-item">
+                    <div class="timeline-header">
+                        <span class="timeline-date">1999 - 2004</span>
+                        <h3>Primary School Education</h3>
+						<button class="CareerToggleButton" onclick="toggleCareerTimeline(this)">+</button>
+                    </div>
+                    <div class="timeline-details">
+                        <p><h4>Nursary to Class VI</h4></p><br>
+                        <ul>
+                            <li>After enrolling in primary school, I progressed rapidly, completing Nursery to Grade 1 within a year. I started in 1998, and by 2004, I had completed Grade 6. I skipped multiple classes—sometimes because I was quick in learning, and other times just to stay in the same class as my friends. Since the school had only two teachers handling all subjects, there was little academic pressure.</li>
+                            <li>The teaching in those early years was very simple and basic, far less structured than today’s syllabus. Learning resources were limited, and the curriculum was not as comprehensive as it is now.</li>
+							<li>Remarkably, my school fees for the entire period up to Grade 6 were less than $15—almost 10% of what other village schools charged at the time. Even if I include all other expenses, the total cost of my primary education never exceeded $100.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Education -->
+                <div class="timeline-item">
+                    <div class="timeline-header">
+                        <span class="timeline-date">2007-2011</span>
+                        <h3>High School Education</h3>
+                        <button class="CareerToggleButton" onclick="toggleCareerTimeline(this)">+</button>
+                    </div>
+                    <div class="timeline-details">
+                        <p>Completed secondary education with focus on science and mathematics</p>
+                        <ul>
+                            <li>School: XYZ High School, Bhopal</li>
+                            <li>Key Achievements: School Topper in Mathematics</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- College -->
+                <div class="timeline-item">
+                    <div class="timeline-header">
+                        <span class="timeline-date">Jul 2011 - May 2015</span>
+                        <h3>Bachelor of Engineering</h3>
+                        <button class="CareerToggleButton" onclick="toggleCareerTimeline(this)">+</button>
+                    </div>
+                    <div class="timeline-details">
+                        <p>Electronics & Communication Engineering</p>
+                        <ul>
+                            <li>Institute: Technocrat Institute of Technology, Bhopal</li>
+                            <li>CGPA: 8.2/10</li>
+                            <li>Key Projects: Automated Attendance System using RFID</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Career Start -->
+                <div class="timeline-item">
+                    <div class="timeline-header">
+                        <span class="timeline-date">2015-2018</span>
+                        <h3>Career Foundation</h3>
+                        <button class="CareerToggleButton" onclick="toggleCareerTimeline(this)">+</button>
+                    </div>
+                    <div class="timeline-details">
+                        <ul>
+                            <li>First job as Junior Engineer at ABC Technologies</li>
+                            <li>Certified in Six Sigma Green Belt</li>
+                            <li>Developed first warehouse automation prototype</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Add more timeline items following same pattern -->
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 Mohammad Parwez. All rights reserved.</p>
+    </footer>
+
+    <!-- Page-specific script -->
+	
+<script>
+    function toggleCareerTimeline(btn) {
+        const timelineItem = btn.closest('.timeline-item');
+        const details = timelineItem.querySelector('.timeline-details');
+        details.classList.toggle('expanded');
+        btn.textContent = details.classList.contains('expanded') ? '−' : '+';
+    }
+</script>
+
+</body>
+</html>
+
+
+
