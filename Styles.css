@@ -3,7 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Open Sans', Arial, sans-serif;
+    font-family: 'Open Sans', Ubuntu, sans-serif;
 }
 
 body {
@@ -36,7 +36,7 @@ header {
     margin: 0 auto;
     display: flex;
     align-items: center; /* Vertical alignment */
-    gap: 30px; /* Space between image and text */
+    gap: 100px; /* Space between image and text */
 }
 
 .profile-img {
@@ -47,12 +47,12 @@ header {
 }
 
 .header-text h1 {
-    font-size: 1.8rem; /* Smaller heading */
+    font-size: 1.7rem; /* Smaller heading */
     margin-bottom: 8px;
 }
 
 .header-text p {
-    font-size: 1.1rem;
+    font-size: 1.0rem;
     opacity: 0.9;
 }
 
@@ -73,13 +73,34 @@ header {
         font-size: 1.5rem;
     }
 }
-.profile-img {
-    width: 250px;
-    height: 250px;
-    border-radius: 50%; /* Makes it circular */
-    margin-bottom: 20px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Adds a shadow for depth */
+.profile-img  {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 3px solid white;
+    margin: 0;
+	box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
+
+.btn-primary, .btn-secondary {
+    display: inline-block;
+    padding: 8px 16px;
+    margin: 5px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    color: white;
+}
+
+.btn-primary {
+    background-color: #facc15;
+    font-weight: bold;
+}
+
+.btn-secondary {
+    background-color: #2563eb;
+} 
+
 
 /* Navigation */
 nav {
@@ -128,6 +149,7 @@ nav ul li a:hover {
 }
 
 /* Cards and Grids */
+
 .card, .project-card, .video-card, .blog-post {
     background: white;
     padding: 20px;
@@ -316,10 +338,13 @@ nav ul li a:hover {
 }
 
 .timeline-details {
-    max-height: 0;
+    display: none;  /* Initially hidden */
     overflow: hidden;
-    padding: 0 20px;
-    transition: all 0.3s ease;
+    transition: max-height 0.3s ease-out;
+}
+
+.expanded {
+    display: block !important;  /* Force visibility */
 }
 
 .career-page .timeline-details.expanded {

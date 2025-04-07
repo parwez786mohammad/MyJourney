@@ -1,64 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- Add to HTML head -->
-<style>
-    /* Career page specific styles */
-    .career-page .CareerToggleButton {
-        background: none;
-        border: 2px solid #4ecdc4;
-        color: #4ecdc4;
-        width: 30px;
-        height: 30px;
-        border-radius: 50%;
-        font-size: 1.2rem;
-        font-weight: bold;
-        transition: all 0.3s;
-        cursor: pointer;
-    }
-
-    .career-page .timeline-details {
-        max-height: 0;
-        overflow: hidden;
-        padding: 0 20px;
-        transition: all 0.3s ease;
-    }
-</style>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mohammad Parwez | My Journey</title>
-    <link rel="stylesheet" href="/MyJourney/Styles.css">
+    <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-	
 </head>
 <body>
-    <!-- Header -->
-	<body class="career-page">
+    <!-- Header Section -->
     <header>
         <div class="header-content">
-            <img src="/MyJourney/Profile.jpeg" alt="Profile" class="profile-img">
+            <img src="./profile.jpeg" alt="Mohammad Parwez" class="profile-img">
             <div class="header-text">
                 <h1>Mohammad Parwez</h1>
-                <p>Project Manager / An Automation Geek</p>
+                <p>Project Manager | @SPAN Traing L.L.C. (Dubai)</p>
+                <p class="intro-text">I specialize in <strong>automation, intralogistics, and digital transformation.</strong>
+                    Explore my journey, projects, and insights into the tech world!</p>
+                <div class="cta-buttons">
+                    <a href="./projects.html" class="btn-primary">Explore My Work</a>
+                    <a href="./contact.html" class="btn-secondary">Let's Connect</a>
+                </div>
             </div>
         </div>
     </header>
 
-    <!-- Navigation -->
+    <!-- Rest of your existing index.html content -->
+</body>
+</html>
+
+ <!-- Navigation -->
+	
     <nav>
         <ul>
-            <li><a href="/MyJourney/index.html">Home</a></li>
-            <li><a href="/MyJourney/about.html">About Me</a></li>
-            <li><a href="/MyJourney/projects.html">Projects</a></li>
-            <li><a href="/MyJourney/career.html">My Journey</a></li>
-            <li><a href="/MyJourney/blog.html">Blog</a></li>
-            <li><a href="/MyJourney/videos.html">Videos</a></li>
-            <li><a href="/MyJourney/contact.html">Contact</a></li>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./about.html">About Me</a></li>
+            <li><a href="./projects.html">Projects</a></li>
+            <li><a href="./career.html">My Journey</a></li>
+            <li><a href="./blog.html">Blogs</a></li>
+            <li><a href="./videos.html">Videos</a></li>
+            <li><a href="./contact.html">Contact</a></li>
         </ul>
     </nav>
 
-    <!-- Career Timeline Section -->
+   <!-- Career Timeline Section -->
     <section id="career" class="section">
         <div class="container">
             <h2>My Professional & Personal Journey</h2>
@@ -114,18 +99,38 @@
                     </div>
                 </div>
 
-                <!-- Education -->
+                <!--Secondtry Education -->
                 <div class="timeline-item">
                     <div class="timeline-header">
-                        <span class="timeline-date">2007-2011</span>
-                        <h3>High School Education</h3>
+                        <span class="timeline-date">2004 - 2008</span>
+                        <h3>Secondary School Education</h3>
                         <button class="CareerToggleButton" onclick="toggleCareerTimeline(this)">+</button>
                     </div>
                     <div class="timeline-details">
-                        <p>Completed secondary education with focus on science and mathematics</p>
+                        <p><br>For my secondary education, I enrolled in a government school. However, for the first two years, I barely attended classes or studied at home. The only thing I consistently did was take private math tuition.</p></br>
                         <ul>
-                            <li>School: XYZ High School, Bhopal</li>
-                            <li>Key Achievements: School Topper in Mathematics</li>
+                            <li>Things changed when I entered Class IX, all because of one teacher—Wasim Sir. He saw potential in me and started giving me extra attention, personally teaching me Math, Physics, and Chemistry. His encouragement ignited my interest in studies. I had no idea how much effort was needed to pass the exams, but friendly study competitions with my peers pushed me forward. Somehow, I managed to score the highest marks in my school, alongside one of my friends—something no one had expected from me.</li>
+                            <br><li>After becoming the school topper, people started asking about my future—would I continue studying or start working? Once again, with the support of my friend, I moved to Patna to pursue my higher secondary education. I joined tuition classes and started preparing for competitive university exams.</li>
+							<br><li>After completing my 10th grade, my teachers and friends advised me that choosing Science with Math would open pathways for engineering or a diploma in engineering. This guidance gave me some clarity, so I decided to take Mathematics and Science for my higher secondary studies.</li>
+                        </ul>
+                    </div>
+                </div>
+				
+                <!--Secondtry High Education -->
+                <div class="timeline-item">
+                    <div class="timeline-header">
+                        <span class="timeline-date">2008 - 2011</span>
+                        <h3>Secondary High School Education</h3>
+                        <button class="CareerToggleButton" onclick="toggleCareerTimeline(this)">+</button>
+                    </div>
+                    <div class="timeline-details">
+                        <p><br>For my higher secondary education, I enrolled in a small school where I only attended to maintain my attendance and appear for the final exams. My real learning journey, however, began when I moved to Patna—a world entirely different from what I had known.</p></br>
+                        <ul>
+                            <li>It was my first time leaving my village and district for studies, and the experience was overwhelming. I realized that the world was vast, and the achievements that had once mattered in my village were just a small part of a much bigger competition. Life in Patna was intense—students worked relentlessly from early morning until midnight, balancing their board exam preparations with competitive exam studies, all chasing the dream of clearing IIT.</li>
+                            <br><li>Unfortunately, the immense pressure, combined with unfamiliar food, took a toll on my health. I fell seriously ill with severe jaundice and was bedridden for almost three months. By the time I recovered, I had lost track of my studies and felt like giving up. However, with my family's support, I decided to restart. I took a gap year and prepared again, this time with greater discipline and determination.</li>
+							<br><li>One of my biggest challenges was English—back in my village, I had studied everything in Hindi, but in Patna, English was the medium of instruction. This shift made learning even harder, but I persevered.</li>
+							<br><li>Despite my efforts, I couldn't clear IIT, nor did I score high enough to secure a top-tier seat in NIT. However, I managed to do well in my 12th board exams and received admission offers from Bhopal and Kolkata. After careful consideration, I chose to pursue my Bachelor of Engineering in Electronics and Communication at Technocrats Institute of Technology, Bhopal.</li>
+							<br><li>This phase of my life taught me resilience, adaptability, and the importance of pushing through challenges—lessons that have shaped who I am today.</li>
                         </ul>
                     </div>
                 </div>
@@ -138,11 +143,24 @@
                         <button class="CareerToggleButton" onclick="toggleCareerTimeline(this)">+</button>
                     </div>
                     <div class="timeline-details">
-                        <p>Electronics & Communication Engineering</p>
+                        <br><p><strong>Domain: Electronics & Communication Engineering</strong></p>
                         <ul>
-                            <li>Institute: Technocrat Institute of Technology, Bhopal</li>
-                            <li>CGPA: 8.2/10</li>
-                            <li>Key Projects: Automated Attendance System using RFID</li>
+                            <li><strong>Institute</strong>: Technocrat Institute of Technology, Bhopal, Madhaya Pardesh, <strong>India</strong></li>
+                            <br><li>When I took admission at TIT Bhopal, one of my friends from my village also joined a different college in the same city. Our families suggested that we live together in an apartment for support, but I had a different vision for myself. I wanted to step out of my comfort zone, disconnect from familiar surroundings, and meet new people to learn from their experiences. So, I decided to stay in the college hostel for my first year.</li>
+                            <br><li>On my first day of college, I was already a week late compared to my classmates. The first session was on communication skills, and the professor asked everyone to introduce themselves on stage. I was so nervous that I couldn’t gather the courage to go up. This moment shattered my confidence. Later that semester, I had to give a seminar in English, but when I stepped onto the stage, I couldn’t utter a single word—I was terrified of speaking in front of people.</li>
+							
+							<br><li>This experience crushed my confidence, but I decided to channel my frustration into studies. I worked extremely hard, and by the end of the semester, I became the topper of my department. Suddenly, everyone started noticing me, and people began approaching me for friendship.</li>
+							
+							<br><li>However, this newfound recognition distracted me, and in the next semester, my grades dropped significantly—I wasn’t even in the top 20 of my class. My classmates started speaking negatively about me. Determined to prove myself again, I worked tirelessly for the next three semesters and became the topper three times in a row, regaining my confidence.</li>
+							
+							<br><li>After that, I shifted my focus from just academics to practical skills that would prepare me for the industry. Instead of studying hard for theoretical exams, I enrolled in external courses on C, C++, Embedded Systems, Communication Skills, and Analytical Thinking. Over the next three semesters, I dedicated myself to developing my overall personality and industry readiness.</li>
+							
+							<br><li>When campus placements began, I faced my biggest challenge—communication skills and stage fear. Despite my strong technical knowledge, I was rejected by over 20 companies. However, I refused to give up. I worked relentlessly on my communication and confidence, and finally, I secured a job at ADP India—one of the leading companies at the time, with one of the highest salary offers. I also received a few more offers but ultimately decided to join ADP.</li>
+							
+							<br><li>My college life was unforgettable. I made many friends and became quite popular, but a few close friends truly shaped my journey. They were kind, supportive, and always there for me—in both good and bad times. College was also when I celebrated my birthday for the first time, which was a special experience.</li>
+							
+							<br><li>Looking back, those four years were some of the best years of my life. The journey was filled with struggles, learning, and personal growth, but it shaped me into the person I am today. It was an absolutely amazing ride!</li>
+							
                         </ul>
                     </div>
                 </div>
@@ -173,20 +191,24 @@
     <footer>
         <p>© 2025 Mohammad Parwez. All rights reserved.</p>
     </footer>
-
-    <!-- Page-specific script -->
 	
 <script>
     function toggleCareerTimeline(btn) {
         const timelineItem = btn.closest('.timeline-item');
         const details = timelineItem.querySelector('.timeline-details');
-        details.classList.toggle('expanded');
-        btn.textContent = details.classList.contains('expanded') ? '−' : '+';
+
+        if (details.classList.contains('expanded')) {
+            details.classList.remove('expanded');
+            details.style.display = "none"; // Ensure hiding
+            btn.textContent = "+"; 
+        } else {
+            details.classList.add('expanded');
+            details.style.display = "block"; // Ensure showing
+            btn.textContent = "−";
+        }
     }
 </script>
 
+	
 </body>
 </html>
-
-
-
