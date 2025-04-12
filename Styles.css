@@ -399,22 +399,6 @@ nav ul li a:hover {
     border-radius: 5px;
 }
 
-/* Contact Section -------------------------------------------------------*/
-.social-links a {
-    text-decoration: none;
-    margin: 0 10px;
-    color: #333; /* Change to your preferred color */
-}
-
-.social-links i {
-    transition: color 0.3s;
-}
-
-.social-links a:hover i {
-    color: #0077b5; /* LinkedIn Blue */
-}
-
-
 /* Footer -------------------------------------------------------*/
 footer {
     text-align: center;
@@ -448,6 +432,110 @@ footer {
         grid-template-columns: 1fr;
     }
 }
+
+
+/* Contact Section -------------------------------------------------------*/
+/* CONTACT SECTION STYLING */
+.contact-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 40px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.contact-card h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.contact-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: space-between;
+}
+
+.contact-info {
+  flex: 1 1 300px;
+}
+
+.contact-info h3 {
+  margin-top: 20px;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.contact-info p,
+.contact-info a {
+  margin: 5px 0;
+  color: #555;
+  text-decoration: none;
+}
+
+.social-icons {
+  margin-top: 10px;
+}
+
+.social-icons a {
+  margin-right: 15px;
+  font-size: 1.5rem;
+  color: #0077b5; /* LinkedIn Blue */
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #222;
+}
+
+
+.social-icons i.fa-blog {
+  color: #ff5722; /* Optional: give blog icon a nice orange */
+}
+
+
+.contact-form {
+  flex: 1 1 300px;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form input,
+.contact-form textarea {
+  margin-bottom: 15px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.contact-form button {
+  padding: 12px;
+  background-color: #2c3e50;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #005a8d;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.95rem;
+  margin-bottom: 15px;
+  color: #444;
+}
+
+
 
 /* Details and Summary -------------------------------------------------------*/
 details {
