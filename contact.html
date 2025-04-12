@@ -4,8 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mohammad Parwez | Contacts</title>
-    <link rel="stylesheet" href="./Styles.css"
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+	<!-- Head section fix -->
+	<link rel="stylesheet" href="./Styles.css"> <!-- this was also missing closing '>' -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
 </head>
 <body>
     <!-- Header Section -->
@@ -44,32 +47,54 @@
         </ul>
     </nav>
 
-    <!-- Contact Section -->
-    <section id="contact" class="section">
-    <div class="container">
-        <div class="card">
-            <h2><strong>Contact Me</strong></h2>
+<!-- Contact Section -->
+<section id="contact" class="section">
+  <div class="container">
+    <div class="contact-card">
+      <h2>📬 Get in Touch</h2>
 
-            <h3><strong>📍 Address</strong></h3>
-            <p>SPAN Trading L.L.C., Showroom 4, <br>Nabooda Complex, Nad Al Hamad Road, Dubai, UAE.</p>
+      <div class="contact-wrapper">
 
-            <p><strong>📧 Email:</strong> Mohammad.Parwez@span-group.com</p>
+        <!-- Contact Info -->
+        <div class="contact-info">
+          <h3><i class="fas fa-map-marker-alt"></i> Location</h3>
+          <p>SPAN Trading L.L.C., Showroom 4, Nabooda Complex, Nad Al Hamad Road, Dubai, UAE</p>
 
-			<div class="social-links">
-				<a href="https://www.linkedin.com/in/mohammad-parwez-18bb01a7/" target="_blank">
-					<i class="fab fa-linkedin fa-2x"></i>
-				</a>
-				<a href="https://github.com/parwez786mohammad" target="_blank">
-					<i class="fab fa-github fa-2x"></i>
-				</a>
-				<a href="https://www.youtube.com/yourchannel" target="_blank">
-					<i class="fab fa-youtube fa-2x"></i>
-				</a>
-			</div>
+          <h3><i class="fas fa-envelope"></i> Email</h3>
+          <p><a href="mailto:mohammad.parwez@span-group.com">mohammad.parwez@span-group.com</a></p>
 
+          <h3><i class="fas fa-file-download"></i> Resume</h3>
+          <p><a href="#" onclick="alert('Please provide your email through the form. I will send it shortly.')">Request My Resume</a></p>
+
+          <h3><i class="fas fa-share-alt"></i> Connect</h3>
+          <div class="social-icons">
+            <a href="https://www.linkedin.com/in/mohammad-parwez-18bb01a7/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/parwez786mohammad" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://www.youtube.com/yourchannel" target="_blank"><i class="fab fa-youtube"></i></a>
+			<a href="./blog.html" target="_blank"><i class="fas fa-blog"></i></a>
+
+          </div>
         </div>
+
+        <!-- Contact Form -->
+        <form class="contact-form" action="https://formspree.io/f/xpwpbwen" method="POST">
+          <input type="text" name="name" placeholder="Your Name" required>
+          <input type="email" name="_replyto" placeholder="Your Email" required>
+          <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+
+          <label class="checkbox-label">
+            <input type="checkbox" name="resume_request" value="yes">
+            I'd like to receive a copy of your resume
+          </label>
+
+          <button type="submit">Send Message</button>
+        </form>
+
+      </div>
     </div>
+  </div>
 </section>
+
 
 
     <!-- Footer -->
