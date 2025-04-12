@@ -85,7 +85,17 @@ id="mcjs">!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[
 				</p>			
         </div>
     </section>
-    
+
+<script>
+  const mobileMenu = document.getElementById('mobile-menu');
+  const navList = document.querySelector('.nav-list');
+
+  mobileMenu.addEventListener('click', () => {
+    navList.classList.toggle('active');
+  });
+</script>
+
+	
     <!-- Footer -->
     <footer>
         <p>© 2025 Mohammad Parwez. All rights reserved.</p>
