@@ -306,8 +306,8 @@ nav ul li a:hover {
     content: '';
     position: absolute;
     left: 50%;
-    width: 2px;
-    height: 100%;
+    width: 20px;
+    height: 500%;
     background: #4ecdc4;
     transform: translateX(-50%);
 }
