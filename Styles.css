@@ -306,15 +306,15 @@ nav ul li a:hover {
     content: '';
     position: absolute;
     left: 50%;
-    width: 20px;
-    height: 500%;
+    width: 2px;
+    height: 100%;
     background: #4ecdc4;
     transform: translateX(-50%);
 }
 
 .career-page .timeline-item {
     position: relative;
-    width: 100%;
+    width: 200%;
     margin-bottom: 40px;
     background: white;
     border-radius: 8px;
