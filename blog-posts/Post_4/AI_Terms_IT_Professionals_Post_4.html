@@ -50,7 +50,59 @@
                 font-size: 14px;
             }
         }
-    </style>
+    
+
+@media (max-width: 768px) {
+    body {
+        font-size: 16px;
+    }
+    .container {
+        padding: 10px;
+        width: 100%;
+    }
+    .header-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .profile-img {
+        width: 100px;
+        height: auto;
+        margin-bottom: 10px;
+    }
+    .cta-buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+    }
+    nav ul li {
+        margin: 5px 0;
+    }
+    table, th, td {
+        font-size: 14px;
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    table {
+        border: none;
+    }
+    th, td {
+        border: none;
+        padding: 8px;
+    }
+    tr {
+        margin-bottom: 10px;
+        display: block;
+        border-bottom: 1px solid #ccc;
+    }
+}
+</style>
 </head>
 <body>
     <header>
