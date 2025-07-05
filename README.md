@@ -1,2 +1,0 @@
-# MyJourney
-My Personal Website
