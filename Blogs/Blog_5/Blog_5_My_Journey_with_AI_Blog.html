@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Journey with AI: From Drafting Emails to Building My Dream Website | Mohammad Parwez</title>
+    <meta name="description" content="A personal story of how AI transformed my journey from simple task automation to building my dream website, sharing lessons learned and practical insights.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="../../css/styles.css">
+    
+    <!-- Additional styles for blog content -->
+    <style>
+        .blog-article {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+        }
+        
+        .back-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1.5rem;
+            background: var(--primary-color, #3b82f6);
+            color: white;
+            text-decoration: none;
+            border-radius: 0.5rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            margin-bottom: 2rem;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .back-button:hover {
+            background: var(--primary-dark, #2563eb);
+            transform: translateY(-1px);
+        }
+        
+        .blog-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding-top: 2rem;
+        }
+        
+        .blog-title {
+            font-size: 2.5rem;
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+            color: var(--text-primary, #1f2937);
+        }
+        
+        .blog-meta {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+        
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-secondary, #6b7280);
+            font-size: 0.9rem;
+        }
+        
+        .blog-hero-container {
+            text-align: center;
+            margin: 3rem 0;
+        }
+        
+        .blog-hero {
+            max-width: 100%;
+            height: auto;
+            border-radius: 1rem;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .blog-content {
+            line-height: 1.8;
+            font-size: 1.1rem;
+        }
+        
+        .blog-content h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin: 2.5rem 0 1.5rem 0;
+            color: var(--text-primary, #1f2937);
+        }
+        
+        .blog-content p {
+            margin-bottom: 1.5rem;
+            color: var(--text-secondary, #374151);
+        }
+        
+        .blog-content ul {
+            margin: 1.5rem 0;
+            padding-left: 2rem;
+        }
+        
+        .blog-content li {
+            margin-bottom: 0.75rem;
+            color: var(--text-secondary, #374151);
+        }
+        
+        .highlight-box {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 1.5rem;
+            border-radius: 0.75rem;
+            margin: 2rem 0;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+        }
+        
+        .highlight-box h4 {
+            margin: 0 0 1rem 0;
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+        
+        .workflow-steps {
+            background: #f8fafc;
+            padding: 1.5rem;
+            border-radius: 0.75rem;
+            margin: 2rem 0;
+            border-left: 4px solid #3b82f6;
+        }
+        
+        .workflow-steps h4 {
+            margin: 0 0 1rem 0;
+            color: #1f2937;
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+        
+        .workflow-steps ol {
+            margin: 0;
+            padding-left: 1.5rem;
+        }
+        
+        .workflow-steps li {
+            margin-bottom: 0.5rem;
+            color: #374151;
+        }
+        
+        /* Mobile responsiveness */
+        @media (max-width: 768px) {
+            .blog-article {
+                padding: 1rem 0.5rem;
+            }
+            
+            .blog-title {
+                font-size: 2rem;
+            }
+            
+            .blog-meta {
+                gap: 1rem;
+            }
+            
+            .blog-content {
+                font-size: 1rem;
+            }
+            
+            .blog-content h3 {
+                font-size: 1.3rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .blog-title {
+                font-size: 1.75rem;
+            }
+            
+            .blog-meta {
+                flex-direction: column;
+                align-items: center;
+                gap: 0.5rem;
+            }
+            
+            .back-button {
+                padding: 0.5rem 1rem;
+                font-size: 0.9rem;
+            }
+        }
+        
+        /* Dark mode support */
+        .dark .blog-title {
+            color: #f9fafb;
+        }
+        
+        .dark .blog-content h3 {
+            color: #f3f4f6;
+        }
+        
+        .dark .blog-content p,
+        .dark .blog-content li {
+            color: #d1d5db;
+        }
+        
+        .dark .workflow-steps {
+            background: #1f2937;
+            border-left-color: #3b82f6;
+        }
+        
+        .dark .workflow-steps h4 {
+            color: #f3f4f6;
+        }
+        
+        .dark .workflow-steps li {
+            color: #d1d5db;
+        }
+    </style>
+</head>
+<body class="dark">
+    <!-- Navigation -->
+    <nav id="navbar" class="navbar">
+        <div class="nav-container">
+            <a href="../../index.html" class="nav-logo">
+                <div class="logo-icon">MP</div>
+                <span class="logo-text">Mohammad Parwez</span>
+            </a>
+
+            <div class="nav-menu">
+                <a href="../../index.html" class="nav-link">Home</a>
+                <a href="../../about.html" class="nav-link">About</a>
+                <a href="../../projects.html" class="nav-link">Projects</a>
+                <a href="../../journey.html" class="nav-link">Journey</a>
+                <a href="../../blogs.html" class="nav-link active">Blogs</a>
+                <a href="../../videos.html" class="nav-link">Videos</a>
+                <a href="../../contact.html" class="nav-link">Contact</a>
+                
+                <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+                    <i data-lucide="sun" class="theme-icon"></i>
+                </button>
+            </div>
+
+            <div class="mobile-controls">
+                <button id="theme-toggle-mobile" class="theme-toggle" aria-label="Toggle theme">
+                    <i data-lucide="sun" class="theme-icon"></i>
+                </button>
+                <button id="mobile-menu-btn" class="mobile-menu-btn">
+                    <i data-lucide="menu" class="menu-icon"></i>
+                </button>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="mobile-menu">
+            <a href="../../index.html" class="mobile-nav-link">Home</a>
+            <a href="../../about.html" class="mobile-nav-link">About</a>
+            <a href="../../projects.html" class="mobile-nav-link">Projects</a>
+            <a href="../../journey.html" class="mobile-nav-link">Journey</a>
+            <a href="../../blogs.html" class="mobile-nav-link active">Blogs</a>
+            <a href="../../videos.html" class="mobile-nav-link">Videos</a>
+            <a href="../../contact.html" class="mobile-nav-link">Contact</a>
+        </div>
+    </nav>
+
+    <section class="section">
+        <div class="container">
+            <div class="blog-article">
+                <!-- Back Button -->
+                <a href="../../blogs.html" class="back-button">
+                    <i data-lucide="arrow-left"></i>
+                    Back to All Posts
+                </a>
+
+                <!-- Blog Header -->
+                <header class="blog-header">
+                    <h1 class="blog-title">🚀 My Journey with AI: From Drafting Emails to Building My Dream Website</h1>
+                    
+                    <div class="blog-meta">
+                        <span class="meta-item">
+                            <i data-lucide="calendar"></i>
+                            July 5, 2025
+                        </span>
+                        <span class="meta-item">
+                            <i data-lucide="clock"></i>
+                            7 min read
+                        </span>
+                    </div>
+                </header>
+
+                <!-- Hero Image -->
+                <div class="blog-hero-container">
+                    <img src="./Blog_5_My Journey With AI.jpeg" alt="My Journey with AI" class="blog-hero">
+                </div>
+
+                <!-- Blog Content -->
+                <div class="blog-content">
+                    <p>When ChatGPT first launched, I, like many others, began using it for everyday tasks — drafting emails, writing documentation, and simplifying project work. It quickly became more than just a tool; it became a reliable assistant in both my professional and personal life.</p>
+                    
+                    <p>From generating images and clarifying technical topics to helping me understand medical reports, AI became my go-to companion.</p>
+                    
+                    <p>But over the past year, I felt a deeper urge — to go beyond tasks and use AI to fulfill a long-standing dream: building my personal website.</p>
+
+                    <h3>💡 A Dream from College Days</h3>
+                    
+                    <p>Since college, I dreamt of having a personal website — a space to share my journey, thoughts, and maybe inspire others. But with no background in web development and a busy career, I kept postponing it for over a decade.</p>
+                    
+                    <p>Working in a functional domain, I had experience understanding customer needs and coordinated with technical teams to get things done — but I myself had no clue how to do coding.</p>
+
+                    <h3>🌙 Ramadan Breakthrough: A Week That Changed Everything</h3>
+                    
+                    <p>During the last Ramadan vacation, I finally found a window to explore. With a clear vision and a lot of hope, I took the plunge.</p>
+                    
+                    <p>Using AI tools like ChatGPT, Grok, and DeepSeek, I dedicated around a week to building my site. Here's what I accomplished:</p>
+                    
+                    <ul>
+                        <li>Learned to host a website using GitHub</li>
+                        <li>Bought a domain — themohammadparwez.com (since mohammadparwez.com was taken) for just $6 from Namecheap</li>
+                        <li>Created and organized all content — with full support from my AI assistants</li>
+                    </ul>
+                    
+                    <p>These 7 days were among the most fulfilling of my life. For 10 years, I believed I couldn't do it alone. But with the right tools and mindset, I finally did.</p>
+                    
+                    <div class="highlight-box">
+                        <h4>💡 Lesson Learned</h4>
+                        <p>Take the first step. Everything else will follow.</p>
+                    </div>
+
+                    <h3>🤖 AI at Work: From Personal Growth to Professional Boost</h3>
+                    
+                    <p>For the past 2 quarters, my company — SPAN Group — encouraged us to explore AI tools. A few brainstorming sessions with our leadership team were conducted, one headed by our technical manager, who introduced us to many new tools beyond ChatGPT and DeepSeek.</p>
+                    
+                    <p>Thanks to management support, we also got access to Microsoft Copilot Pro, which further enhanced our productivity.</p>
+
+                    <h3>✍️ Sharing My Learnings</h3>
+                    
+                    <p>Over the past months, I've been exploring how AI can revolutionize industries. I started writing blog posts to share these insights:</p>
+                    
+                    <ul>
+                        <li>📄 <strong>AI Terms IT Professionals Must Know</strong>: Essential terminology for staying relevant in the AI era</li>
+                        <li>📄 <strong>How AI Will Transform Intralogistics</strong>: Exploring AI's impact on warehouse operations</li>
+                        <li>📄 <strong>Digital Transformation Strategies</strong>: Why businesses must embrace digital change</li>
+                        <li>📄 <strong>Automation Trends 2025</strong>: Five key trends shaping industrial automation</li>
+                    </ul>
+                    
+                    <p>Even if just one person feels inspired to explore AI after reading my posts, it's worth it. And I'll keep writing — no matter what.</p>
+
+                    <h3>⚡ The Power of AI: From 7 Days to 2 Hours</h3>
+                    
+                    <p>Recently, I revamped my website using an AI builder named Bolt. What took me 7 days the first time now took less than 2 hours — including this blog post and design updates.</p>
+                    
+                    <div class="workflow-steps">
+                        <h4>🔄 My AI-Powered Blog Workflow:</h4>
+                        <ol>
+                            <li>Write the initial draft</li>
+                            <li>Run it through ChatGPT for feedback</li>
+                            <li>Use Copilot to polish tone and summarize</li>
+                            <li>Ask Bolt to convert it into a clean HTML layout</li>
+                            <li>Publish it on my website</li>
+                        </ol>
+                    </div>
+                    
+                    <p><strong>This is the power of AI: Turning weeks into hours, lowering costs, and accelerating progress.</strong></p>
+
+                    <h3>🔑 Key Takeaways</h3>
+                    
+                    <ul>
+                        <li><strong>Start now</strong>: Don't wait for the perfect time or full knowledge</li>
+                        <li><strong>AI is an enabler</strong>: Your creativity and willpower matter most</li>
+                        <li><strong>Explore multiple tools</strong>: Each has unique strengths</li>
+                        <li><strong>You don't need to be a developer</strong>: You just need to be a doer</li>
+                        <li><strong>Embrace the learning process</strong>: Every challenge is an opportunity to grow</li>
+                    </ul>
+
+                    <h3>🌐 Looking Forward</h3>
+                    
+                    <p>My website journey is far from over. With AI as my companion, I'm continuously improving, adding new content, and exploring innovative ways to share knowledge and inspire others.</p>
+                    
+                    <p>The transformation from someone who "couldn't code" to someone who builds and maintains a professional website is a testament to what's possible when we combine human ambition with AI capabilities.</p>
+                    
+                    <div class="highlight-box">
+                        <h4>🎯 Final Thought</h4>
+                        <p>If this inspires even one of you to start your dream project — I've done my part. Stay curious. Keep building. The future belongs to those who embrace change and take action.</p>
+                    </div>
+                    
+                    <p><strong>— Mohammad Parwez</strong></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-main">
+                    <h3 class="footer-title">Mohammad Parwez</h3>
+                    <p class="footer-description">
+                        Project Manager specializing in automation, intralogistics, and digital transformation.
+                    </p>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/mohammad-parwez-18bb01a7/" target="_blank" class="social-link">
+                            <i data-lucide="linkedin"></i>
+                        </a>
+                        <a href="https://www.instagram.com/themohammadparwez.1611/" target="_blank" class="social-link">
+                            <i data-lucide="Instagram"></i>
+                        </a>
+                        <a href="https://www.youtube.com/@TheMohammadParwez" target="_blank" class="social-link">
+                            <i data-lucide="youtube"></i>
+                        </a>
+                        <a href="mailto:mohammad.parwez@span-group.com" class="social-link">
+                            <i data-lucide="mail"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="../../about.html">About</a></li>
+                        <li><a href="../../projects.html">Projects</a></li>
+                        <li><a href="../../journey.html">Journey</a></li>
+                        <li><a href="../../blogs.html">Blogs</a></li>
+                        <li><a href="../../contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2025 Mohammad Parwez. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <script src="../../js/main.js"></script>
+    <script src="../../js/blogs.js"></script>
+</body>
+</html>
