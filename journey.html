@@ -1,0 +1,956 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Journey | Mohammad Parwez</title>
+    <meta name="description" content="Explore Mohammad Parwez's professional journey from engineering student to leading digital transformation projects.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/styles.css">
+    
+    <!-- Additional styles for enhanced timeline -->
+    <style>
+        .timeline-container {
+            position: relative;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 2rem 0;
+        }
+        
+        .timeline-line {
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: linear-gradient(180deg, var(--primary-color) 0%, var(--accent-color) 100%);
+            transform: translateX(-50%);
+            z-index: 1;
+        }
+        
+        .timeline-item {
+            position: relative;
+            margin-bottom: 3rem;
+            opacity: 0;
+            animation: fadeInUp 0.6s ease forwards;
+        }
+        
+        .timeline-item:nth-child(even) {
+            animation-delay: 0.2s;
+        }
+        
+        .timeline-item:nth-child(odd) {
+            animation-delay: 0.1s;
+        }
+        
+        .timeline-dot {
+            position: absolute;
+            left: 50%;
+            top: 2rem;
+            width: 20px;
+            height: 20px;
+            background: var(--primary-color);
+            border: 4px solid var(--bg-primary);
+            border-radius: 50%;
+            transform: translateX(-50%);
+            z-index: 2;
+            box-shadow: 0 0 0 4px var(--primary-color-alpha);
+        }
+        
+        .timeline-content {
+            width: 45%;
+            background: var(--card-bg);
+            border-radius: 1rem;
+            padding: 0;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            border: 1px solid var(--border-color);
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        
+        .timeline-content:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+        
+        .timeline-item:nth-child(odd) .timeline-content {
+            margin-left: 0;
+        }
+        
+        .timeline-item:nth-child(even) .timeline-content {
+            margin-left: 55%;
+        }
+        
+        .timeline-header {
+            padding: 1.5rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border-bottom: 1px solid var(--border-color);
+            position: relative;
+        }
+        
+        .timeline-header:hover {
+            background: var(--hover-bg);
+        }
+        
+        .timeline-period {
+            display: inline-block;
+            background: var(--primary-color);
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: 1rem;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+        }
+        
+        .timeline-badge {
+            display: inline-block;
+            background: var(--accent-color);
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: 1rem;
+            font-size: 0.7rem;
+            font-weight: 500;
+            margin-left: 0.5rem;
+            margin-bottom: 0.75rem;
+        }
+        
+        .timeline-title {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin: 0.5rem 0;
+            padding-right: 3rem;
+        }
+        
+        .timeline-company {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin: 0.5rem 0;
+            font-weight: 500;
+            color: var(--text-secondary);
+        }
+        
+        .timeline-location {
+            display: flex;
+            align-items: center;
+            gap: 0.25rem;
+            font-size: 0.9rem;
+            color: var(--text-tertiary);
+        }
+        
+        .timeline-description {
+            color: var(--text-secondary);
+            margin: 0.75rem 0 0 0;
+            line-height: 1.6;
+        }
+        
+        .timeline-toggle {
+            position: absolute;
+            top: 1.5rem;
+            right: 1.5rem;
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 1.2rem;
+        }
+        
+        .timeline-toggle:hover {
+            background: var(--primary-dark);
+            transform: scale(1.1);
+        }
+        
+        .timeline-toggle.expanded {
+            transform: rotate(180deg);
+        }
+        
+        .timeline-toggle.expanded:hover {
+            transform: rotate(180deg) scale(1.1);
+        }
+        
+        .timeline-details {
+            padding: 0 1.5rem;
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.4s ease;
+            background: var(--card-bg-secondary);
+        }
+        
+        .timeline-details.expanded {
+            max-height: 2000px;
+            padding: 1.5rem;
+        }
+        
+        .timeline-details h4 {
+            color: var(--text-primary);
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin: 0 0 1rem 0;
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 0.5rem;
+            display: inline-block;
+        }
+        
+        .timeline-details ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .timeline-details li {
+            position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: 0.75rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+        
+        .timeline-details li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+        
+        .timeline-details p {
+            color: var(--text-secondary);
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+        
+        .timeline-details strong {
+            color: var(--text-primary);
+        }
+        
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            .timeline-line {
+                left: 2rem;
+            }
+            
+            .timeline-dot {
+                left: 2rem;
+            }
+            
+            .timeline-content {
+                width: calc(100% - 4rem);
+                margin-left: 4rem !important;
+            }
+            
+            .timeline-item:nth-child(even) .timeline-content {
+                margin-left: 4rem !important;
+            }
+            
+            .timeline-header {
+                padding: 1rem;
+            }
+            
+            .timeline-toggle {
+                top: 1rem;
+                right: 1rem;
+                width: 28px;
+                height: 28px;
+                font-size: 1rem;
+            }
+            
+            .timeline-title {
+                font-size: 1.2rem;
+                padding-right: 2.5rem;
+            }
+            
+            .timeline-company {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.25rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .timeline-container {
+                padding: 1rem 0;
+            }
+            
+            .timeline-content {
+                width: calc(100% - 3rem);
+                margin-left: 3rem !important;
+            }
+            
+            .timeline-line {
+                left: 1.5rem;
+            }
+            
+            .timeline-dot {
+                left: 1.5rem;
+                width: 16px;
+                height: 16px;
+            }
+            
+            .timeline-header {
+                padding: 0.75rem;
+            }
+            
+            .timeline-title {
+                font-size: 1.1rem;
+            }
+            
+            .timeline-period,
+            .timeline-badge {
+                font-size: 0.7rem;
+                padding: 0.2rem 0.5rem;
+            }
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        /* Dark mode enhancements */
+        .dark .timeline-details {
+            background: var(--card-bg-dark);
+        }
+        
+        .dark .timeline-content {
+            background: var(--card-bg-dark);
+            border-color: var(--border-dark);
+        }
+        
+        .dark .timeline-header:hover {
+            background: var(--hover-bg-dark);
+        }
+    </style>
+</head>
+<body class="dark">
+    <!-- Navigation -->
+    <nav id="navbar" class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <div class="logo-icon">MP</div>
+                <span class="logo-text">Mohammad Parwez</span>
+            </a>
+
+            <div class="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="projects.html" class="nav-link">Projects</a>
+                <a href="journey.html" class="nav-link active">Journey</a>
+                <a href="blogs.html" class="nav-link">Blogs</a>
+                <a href="videos.html" class="nav-link">Videos</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+                
+                <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+                    <i data-lucide="sun" class="theme-icon"></i>
+                </button>
+            </div>
+
+            <div class="mobile-controls">
+                <button id="theme-toggle-mobile" class="theme-toggle" aria-label="Toggle theme">
+                    <i data-lucide="sun" class="theme-icon"></i>
+                </button>
+                <button id="mobile-menu-btn" class="mobile-menu-btn">
+                    <i data-lucide="menu" class="menu-icon"></i>
+                </button>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="mobile-menu">
+            <a href="index.html" class="mobile-nav-link">Home</a>
+            <a href="about.html" class="mobile-nav-link">About</a>
+            <a href="projects.html" class="mobile-nav-link">Projects</a>
+            <a href="journey.html" class="mobile-nav-link active">Journey</a>
+            <a href="blogs.html" class="mobile-nav-link">Blogs</a>
+            <a href="videos.html" class="mobile-nav-link">Videos</a>
+            <a href="contact.html" class="mobile-nav-link">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Journey Section -->
+    <section class="page-section">
+        <div class="container">
+            <!-- Header -->
+            <div class="page-header">
+                <h1 class="page-title">
+                    My <span class="gradient-text">Journey</span>
+                </h1>
+                <p class="page-description">
+                    From a small village in Bihar to leading digital transformation projects in Dubai - explore my professional and personal growth story
+                </p>
+            </div>
+
+            <!-- Timeline -->
+            <div class="timeline-container">
+                <div class="timeline-line"></div>
+
+                <!-- Current Role -->
+                <div class="timeline-item" data-index="0">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header" onclick="toggleTimelineItem(this)">
+                            <div class="timeline-info">
+                                <div class="timeline-period">2022 - Present</div>
+                                <div class="timeline-badge">Current Role</div>
+                                <h3 class="timeline-title">Project Manager</h3>
+                                <div class="timeline-company">
+                                    <span>SPAN Trading L.L.C.</span>
+                                    <span class="timeline-location">
+                                        <i data-lucide="map-pin"></i>
+                                        Dubai, UAE
+                                    </span>
+                                </div>
+                                <p class="timeline-description">Leading digital transformation initiatives and automation projects across multiple domains.</p>
+                            </div>
+                            <button class="timeline-toggle">
+                                <i data-lucide="chevron-down"></i>
+                            </button>
+                        </div>
+
+                        <div class="timeline-details">
+                            <h4>Key Responsibilities & Achievements</h4>
+                            <ul>
+                                <li>Spearheading the digital transformation of asset and inventory tracking systems</li>
+                                <li>Successfully delivered the Etisalat e& Smart Autonomous Store project</li>
+                                <li>Managing concurrent automation projects with teams of 30+ professionals</li>
+                                <li>Implementing cutting-edge AI and IoT solutions for retail and logistics</li>
+                                <li>Driving operational efficiency improvements of 40-60% across projects</li>
+                                <li>Leading the migration of asset & inventory tracking systems to web-based platforms</li>
+                                <li>Implementing solutions including AMR, ASRS, RFID, IoT, WMS, ITMS for cost reduction and scalability</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SPAN Group Journey -->
+                <div class="timeline-item" data-index="1">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header" onclick="toggleTimelineItem(this)">
+                            <div class="timeline-info">
+                                <div class="timeline-period">Dec 2018 - 2022</div>
+                                <div class="timeline-badge">Career Growth</div>
+                                <h3 class="timeline-title">SPAN Group - Complete Journey</h3>
+                                <div class="timeline-company">
+                                    <span>SPAN Trading L.L.C.</span>
+                                    <span class="timeline-location">
+                                        <i data-lucide="map-pin"></i>
+                                        Dubai, UAE
+                                    </span>
+                                </div>
+                                <p class="timeline-description">Remarkable journey from Inventory Clerk to Project Manager through dedication and continuous learning.</p>
+                            </div>
+                            <button class="timeline-toggle">
+                                <i data-lucide="chevron-down"></i>
+                            </button>
+                        </div>
+
+                        <div class="timeline-details">
+                            <h4>Phase 1: Building Foundation (Dec 2018 - Mar 2020)</h4>
+                            <p>Started as an <strong>Inventory Clerk</strong> and quickly proved my worth through dedication and positive attitude.</p>
+                            <ul>
+                                <li>Promoted to Supervisor after 8 months of exceptional performance</li>
+                                <li>Advanced to Senior Supervisor within the next few months</li>
+                                <li>Earned promotion to Implementation Consultant after 10 months</li>
+                                <li>Led end-to-end implementation of warehouse automation and asset tracking solutions</li>
+                                <li>Successfully implemented S4Assets (Asset Management System) for 25+ clients</li>
+                                <li>Enhanced operational workflows, reducing manual labor by 30%</li>
+                            </ul>
+                            
+                            <h4>Phase 2: Leadership Development (Apr 2020 - Current)</h4>
+                            <p>Focused on building leadership skills and preparing for project management role.</p>
+                            <ul>
+                                <li>Participated in various training programs and worked closely with senior management</li>
+                                <li>Handled small projects and gradually took on larger responsibilities</li>
+                                <li>Officially promoted to Project Manager after 2-3 years of intensive training</li>
+                                <li>Currently leading 20+ concurrent projects across supply chain and logistics automation</li>
+                                <li>Driving digital transformation initiatives with focus on web-based platforms</li>
+                                <li>Achieved 50% reduction in manual efforts and 35% increase in tracking accuracy</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- S*ace Dubai -->
+                <div class="timeline-item" data-index="2">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header" onclick="toggleTimelineItem(this)">
+                            <div class="timeline-info">
+                                <div class="timeline-period">July 2018 - Nov 2018</div>
+                                <div class="timeline-badge">First Dubai Job</div>
+                                <h3 class="timeline-title">IT Manager</h3>
+                                <div class="timeline-company">
+                                    <span>S*ace Dubai</span>
+                                    <span class="timeline-location">
+                                        <i data-lucide="map-pin"></i>
+                                        Dubai, UAE
+                                    </span>
+                                </div>
+                                <p class="timeline-description">First job in Dubai - secured within 10 days of arrival with no connections.</p>
+                            </div>
+                            <button class="timeline-toggle">
+                                <i data-lucide="chevron-down"></i>
+                            </button>
+                        </div>
+
+                        <div class="timeline-details">
+                            <h4>Key Achievements</h4>
+                            <ul>
+                                <li>Secured job offers from 3 different companies within 10 days of landing in Dubai</li>
+                                <li>Quickly expanded from technical role to handling all IT and software operations</li>
+                                <li>Appointed as IT Manager due to exceptional contributions</li>
+                                <li>Gained expertise in SAP Business One, inventory management, and pricing strategies</li>
+                                <li>Led database migration to HANA database, optimizing system performance</li>
+                                <li>Managed IT infrastructure and enhanced business processes</li>
+                            </ul>
+                            <p><strong>Note:</strong> Company closure due to unforeseen circumstances led to the opportunity at SPAN Trading L.L.C.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ADP Experience -->
+                <div class="timeline-item" data-index="3">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header" onclick="toggleTimelineItem(this)">
+                            <div class="timeline-info">
+                                <div class="timeline-period">Jun 2015 - Jun 2018</div>
+                                <div class="timeline-badge">Professional Development</div>
+                                <h3 class="timeline-title">SAP HCM Consultant</h3>
+                                <div class="timeline-company">
+                                    <span>ADP Private Limited</span>
+                                    <span class="timeline-location">
+                                        <i data-lucide="map-pin"></i>
+                                        Hyderabad, India
+                                    </span>
+                                </div>
+                                <p class="timeline-description">Transformative phase building SAP expertise, confidence, and communication skills.</p>
+                            </div>
+                            <button class="timeline-toggle">
+                                <i data-lucide="chevron-down"></i>
+                            </button>
+                        </div>
+
+                        <div class="timeline-details">
+                            <h4>Technical Expertise & Responsibilities</h4>
+                            <ul>
+                                <li>Contributed to Payroll Functional Support (US & Mexico Payroll), Client Champion, Interfaces Team, Projects Team, and ECHO Team</li>
+                                <li>Resolved complex payroll concerns for US and Mexico-based clients</li>
+                                <li>Led requirement gathering, business blueprinting, configuration, and testing</li>
+                                <li>Configured client-specific requirements and implemented custom payroll changes</li>
+                                <li>Created detailed training materials and analytical reports</li>
+                                <li>Conducted rigorous testing across multiple scenarios before deployment</li>
+                            </ul>
+                            
+                            <h4>Personal & Professional Growth</h4>
+                            <ul>
+                                <li>Became core member of company's Toastmasters club, developing public speaking and leadership skills</li>
+                                <li>Built lifelong friendships that continue to be strong today</li>
+                                <li>Gained confidence to take bold career risks</li>
+                                <li>Made the decision to resign without another job lined up to seek new challenges</li>
+                            </ul>
+                            
+                            <p><strong>Career Transition:</strong> This experience gave me the confidence to move to Dubai and start a new chapter in automation technologies.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Practo Experience -->
+                <div class="timeline-item" data-index="4">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header" onclick="toggleTimelineItem(this)">
+                            <div class="timeline-info">
+                                <div class="timeline-period">Apr 2015 - May 2015</div>
+                                <div class="timeline-badge">First Job</div>
+                                <h3 class="timeline-title">Blitz Member</h3>
+                                <div class="timeline-company">
+                                    <span>Practo Private Limited</span>
+                                    <span class="timeline-location">
+                                        <i data-lucide="map-pin"></i>
+                                        Bangalore/Varanasi, India
+                                    </span>
+                                </div>
+                                <p class="timeline-description">First professional role helping expand Practo's network of registered doctors.</p>
+                            </div>
+                            <button class="timeline-toggle">
+                                <i data-lucide="chevron-down"></i>
+                            </button>
+                        </div>
+
+                        <div class="timeline-details">
+                            <h4>Key Responsibilities</h4>
+                            <ul>
+                                <li>Data Collection & Outreach - Gathering essential clinic information for the Practo platform</li>
+                                <li>Doctor Engagement - Communicating with healthcare professionals and encouraging registration</li>
+                                <li>Field & Market Exposure - Gaining hands-on experience in professional interactions and negotiations</li>
+                                <li>Enhanced communication skills and gained valuable healthcare tech industry exposure</li>
+                                <li>Developed client interaction and data-driven decision-making skills</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- College Education -->
+                <div class="timeline-item" data-index="5">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header" onclick="toggleTimelineItem(this)">
+                            <div class="timeline-info">
+                                <div class="timeline-period">Jul 2011 - May 2015</div>
+                                <div class="timeline-badge">Education</div>
+                                <h3 class="timeline-title">Bachelor of Engineering</h3>
+                                <div class="timeline-company">
+                                    <span>Technocrats Institute of Technology</span>
+                                    <span class="timeline-location">
+                                        <i data-lucide="map-pin"></i>
+                                        Bhopal, India
+                                    </span>
+                                </div>
+                                <p class="timeline-description">Electronics & Communication Engineering - A journey of academic excellence and personal growth.</p>
+                            </div>
+                            <button class="timeline-toggle">
+                                <i data-lucide="chevron-down"></i>
+                            </button>
+                        </div>
+
+                        <div class="timeline-details">
+                            <h4>Academic Journey & Challenges</h4>
+                            <ul>
+                                <li>Started college a week late, faced severe stage fear during first communication skills session</li>
+                                <li>Overcame initial confidence issues by focusing intensely on studies</li>
+                                <li>Became department topper in first semester, gaining recognition from peers</li>
+                                <li>Experienced ups and downs - dropped out of top 20 in second semester due to distractions</li>
+                                <li>Regained focus and became topper for three consecutive semesters</li>
+                                <li>Shifted focus from theoretical studies to practical industry skills</li>
+                            </ul>
+                            
+                            <h4>Skill Development & Growth</h4>
+                            <ul>
+                                <li>Enrolled in external courses: C, C++, Embedded Systems, Communication Skills, Analytical Thinking</li>
+                                <li>Focused on overall personality development and industry readiness</li>
+                                <li>Overcame communication challenges and stage fear through persistent effort</li>
+                                <li>Faced rejection from 20+ companies during campus placements due to communication barriers</li>
+                                <li>Finally secured position at ADP India - one of the leading companies with highest salary offer</li>
+                                <li>Made lifelong friendships and became popular in college community</li>
+                            </ul>
+                            
+                            <p><strong>Personal Milestone:</strong> Celebrated my birthday for the first time during college years - a special and memorable experience.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Higher Secondary Education -->
+                <div class="timeline-item" data-index="6">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header" onclick="toggleTimelineItem(this)">
+                            <div class="timeline-info">
+                                <div class="timeline-period">2008 - 2011</div>
+                                <div class="timeline-badge">Education</div>
+                                <h3 class="timeline-title">Higher Secondary Education</h3>
+                                <div class="timeline-company">
+                                    <span>Science with Mathematics</span>
+                                    <span class="timeline-location">
+                                        <i data-lucide="map-pin"></i>
+                                        Patna, India
+                                    </span>
+                                </div>
+                                <p class="timeline-description">First time leaving village for studies - a transformative experience in Patna.</p>
+                            </div>
+                            <button class="timeline-toggle">
+                                <i data-lucide="chevron-down"></i>
+                            </button>
+                        </div>
+
+                        <div class="timeline-details">
+                            <h4>Challenges & Learning</h4>
+                            <ul>
+                                <li>First time leaving village and district for studies - overwhelming experience</li>
+                                <li>Realized the vast competition beyond village achievements</li>
+                                <li>Experienced intense academic pressure - students working from early morning to midnight</li>
+                                <li>Struggled with English medium instruction after studying in Hindi</li>
+                                <li>Fell seriously ill with jaundice, bedridden for 3 months</li>
+                                <li>Lost track of studies but decided to restart with family support</li>
+                            </ul>
+                            
+                            <h4>Perseverance & Results</h4>
+                            <ul>
+                                <li>Took a gap year and prepared again with greater discipline</li>
+                                <li>Couldn't clear IIT but performed well in 12th board exams</li>
+                                <li>Received admission offers from Bhopal and Kolkata</li>
+                                <li>Chose Technocrats Institute of Technology, Bhopal for Engineering</li>
+                                <li>Learned resilience, adaptability, and importance of pushing through challenges</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Secondary Education -->
+                <div class="timeline-item" data-index="7">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header" onclick="toggleTimelineItem(this)">
+                            <div class="timeline-info">
+                                <div class="timeline-period">2004 - 2008</div>
+                                <div class="timeline-badge">Education</div>
+                                <h3 class="timeline-title">Secondary School Education</h3>
+                                <div class="timeline-company">
+                                    <span>Government School</span>
+                                    <span class="timeline-location">
+                                        <i data-lucide="map-pin"></i>
+                                        Village School, Bihar
+                                    </span>
+                                </div>
+                                <p class="timeline-description">Academic awakening through the influence of an inspiring teacher.</p>
+                            </div>
+                            <button class="timeline-toggle">
+                                <i data-lucide="chevron-down"></i>
+                            </button>
+                        </div>
+
+                        <div class="timeline-details">
+                            <h4>The Turning Point</h4>
+                            <ul>
+                                <li>First two years: Barely attended classes, only took private math tuition</li>
+                                <li>Class IX transformation: Wasim Sir saw potential and gave extra attention</li>
+                                <li>Received personal teaching in Math, Physics, and Chemistry</li>
+                                <li>Developed interest in studies through teacher's encouragement</li>
+                                <li>Engaged in friendly study competitions with peers</li>
+                                <li>Achieved highest marks in school alongside a friend - unexpected success</li>
+                            </ul>
+                            
+                            <h4>Future Planning</h4>
+                            <ul>
+                                <li>Teachers and friends advised choosing Science with Math for engineering pathway</li>
+                                <li>Gained clarity about future academic direction</li>
+                                <li>Decided to move to Patna for higher secondary education</li>
+                                <li>Started preparing for competitive university exams</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Primary Education -->
+                <div class="timeline-item" data-index="8">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header" onclick="toggleTimelineItem(this)">
+                            <div class="timeline-info">
+                                <div class="timeline-period">1999 - 2004</div>
+                                <div class="timeline-badge">Education</div>
+                                <h3 class="timeline-title">Primary School Education</h3>
+                                <div class="timeline-company">
+                                    <span>Village School</span>
+                                    <span class="timeline-location">
+                                        <i data-lucide="map-pin"></i>
+                                        Sareya Village, Bihar
+                                    </span>
+                                </div>
+                                <p class="timeline-description">Foundation years in a simple village school with basic but effective education.</p>
+                            </div>
+                            <button class="timeline-toggle">
+                                <i data-lucide="chevron-down"></i>
+                            </button>
+                        </div>
+
+                        <div class="timeline-details">
+                            <h4>Educational Journey</h4>
+                            <ul>
+                                <li>Progressed rapidly: completed Nursery to Grade 1 within a year</li>
+                                <li>Completed Grade 6 by 2004, sometimes skipping classes to stay with friends</li>
+                                <li>School had only two teachers handling all subjects with minimal academic pressure</li>
+                                <li>Teaching was simple and basic, less structured than modern curriculum</li>
+                                <li>Limited learning resources but effective foundational education</li>
+                            </ul>
+                            
+                            <h4>Remarkable Affordability</h4>
+                            <ul>
+                                <li>Total school fees for entire primary education: less than $15</li>
+                                <li>Fees were 10% of what other village schools charged</li>
+                                <li>Total cost including all expenses never exceeded $100</li>
+                                <li>Demonstrates the value of accessible education in rural areas</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Early Education -->
+                <div class="timeline-item" data-index="9">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header" onclick="toggleTimelineItem(this)">
+                            <div class="timeline-info">
+                                <div class="timeline-period">1996 - 1998</div>
+                                <div class="timeline-badge">Early Learning</div>
+                                <h3 class="timeline-title">Early Education</h3>
+                                <div class="timeline-company">
+                                    <span>Village Madrasa</span>
+                                    <span class="timeline-location">
+                                        <i data-lucide="map-pin"></i>
+                                        Sareya Village, Bihar
+                                    </span>
+                                </div>
+                                <p class="timeline-description">Foundation learning through Islamic education and mother's teachings.</p>
+                            </div>
+                            <button class="timeline-toggle">
+                                <i data-lucide="chevron-down"></i>
+                            </button>
+                        </div>
+
+                        <div class="timeline-details">
+                            <h4>Foundation Learning</h4>
+                            <ul>
+                                <li>Mother taught basics of Islam and prayers with no educated family members</li>
+                                <li>Learned fundamental duas and Islamic teachings</li>
+                                <li>Attended village madrasa for Islamic education</li>
+                                <li>Learned to read Arabic and grasped concepts quickly</li>
+                                <li>Impressed the Moulvi with learning abilities</li>
+                                <li>Moulvi advised parents to enroll in formal school</li>
+                            </ul>
+                            
+                            <h4>Transition to Formal Education</h4>
+                            <ul>
+                                <li>Father decided to send to formal school based on Moulvi's advice</li>
+                                <li>Enrolled in small school with just two teachers</li>
+                                <li>School taught all subjects from Nursery to Class VI</li>
+                                <li>Beginning of formal educational journey</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Birth & Early Life -->
+                <div class="timeline-item" data-index="10">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header" onclick="toggleTimelineItem(this)">
+                            <div class="timeline-info">
+                                <div class="timeline-period">November 1992</div>
+                                <div class="timeline-badge">Beginning</div>
+                                <h3 class="timeline-title">My Birthday</h3>
+                                <div class="timeline-company">
+                                    <span>Sareya Village</span>
+                                    <span class="timeline-location">
+                                        <i data-lucide="map-pin"></i>
+                                        Gopalganj, Bihar, India
+                                    </span>
+                                </div>
+                                <p class="timeline-description">Humble beginnings in a small village that shaped my values and determination.</p>
+                            </div>
+                            <button class="timeline-toggle">
+                                <i data-lucide="chevron-down"></i>
+                            </button>
+                        </div>
+
+                        <div class="timeline-details">
+                            <h4>Humble Beginnings</h4>
+                            <ul>
+                                <li>Born in Sareya, a small village in Gopalganj district of Bihar</li>
+                                <li>Grew up in modest rural setting with values of hard work, resilience, and perseverance</li>
+                                <li>Life was simple yet challenging, instilling determination to rise above circumstances</li>
+                                <li>Second child and first son among six siblings</li>
+                                <li>Education was a distant dream for most families in the village</li>
+                                <li>Prevailing mindset prioritized survival over schooling</li>
+                            </ul>
+                            
+                            <h4>Village Transformation</h4>
+                            <ul>
+                                <li>Many families believed more children meant greater strength for land protection</li>
+                                <li>Conflicts often settled with lathis rather than law</li>
+                                <li>Gradual change in perspective - people started valuing education</li>
+                                <li>Sareya became one of the most educated villages in the region</li>
+                                <li>Transformation paved way for next generation's opportunities</li>
+                                <li>Seeds of change continue to flourish with ongoing progress</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Call to Action -->
+            <div class="cta-section">
+                <div class="cta-card">
+                    <h3>Ready for the Next Challenge</h3>
+                    <p>
+                        From a small village in Bihar to leading digital transformation projects in Dubai - 
+                        my journey continues with passion for innovation and excellence.
+                    </p>
+                    <a href="contact.html" class="btn btn-primary">
+                        Let's Connect
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-main">
+                    <h3 class="footer-title">Mohammad Parwez</h3>
+                    <p class="footer-description">
+                        Project Manager specializing in automation, intralogistics, and digital transformation.
+                    </p>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/mohammad-parwez-18bb01a7/" target="_blank" class="social-link">
+                            <i data-lucide="linkedin"></i>
+                        </a>
+                        <a href="https://www.instagram.com/themohammadparwez.1611/" target="_blank" class="social-link">
+                            <i data-lucide="Instagram"></i>
+                        </a>
+                        <a href="https://www.youtube.com/@TheMohammadParwez" target="_blank" class="social-link">
+                            <i data-lucide="youtube"></i>
+                        </a>
+                        <a href="mailto:mohammad.parwez@span-group.com" class="social-link">
+                            <i data-lucide="mail"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="journey.html">Journey</a></li>
+                        <li><a href="blogs.html">Blogs</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2025 Mohammad Parwez. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/journey.js"></script>
+</body>
+</html>

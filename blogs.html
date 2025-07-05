@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blogs | Mohammad Parwez</title>
+    <meta name="description" content="Read Mohammad Parwez's insights on technology, leadership, career growth, and lessons learned from automation and digital transformation.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="dark">
+    <!-- Navigation -->
+    <nav id="navbar" class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <div class="logo-icon">MP</div>
+                <span class="logo-text">Mohammad Parwez</span>
+            </a>
+
+            <div class="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="projects.html" class="nav-link">Projects</a>
+                <a href="journey.html" class="nav-link">Journey</a>
+                <a href="blogs.html" class="nav-link active">Blogs</a>
+                <a href="videos.html" class="nav-link">Videos</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+                
+                <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+                    <i data-lucide="sun" class="theme-icon"></i>
+                </button>
+            </div>
+
+            <div class="mobile-controls">
+                <button id="theme-toggle-mobile" class="theme-toggle" aria-label="Toggle theme">
+                    <i data-lucide="sun" class="theme-icon"></i>
+                </button>
+                <button id="mobile-menu-btn" class="mobile-menu-btn">
+                    <i data-lucide="menu" class="menu-icon"></i>
+                </button>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="mobile-menu">
+            <a href="index.html" class="mobile-nav-link">Home</a>
+            <a href="about.html" class="mobile-nav-link">About</a>
+            <a href="projects.html" class="mobile-nav-link">Projects</a>
+            <a href="journey.html" class="mobile-nav-link">Journey</a>
+            <a href="blogs.html" class="mobile-nav-link active">Blogs</a>
+            <a href="videos.html" class="mobile-nav-link">Videos</a>
+            <a href="contact.html" class="mobile-nav-link">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Blogs Section -->
+    <section class="page-section">
+        <div class="container">
+            <!-- Header -->
+            <div class="page-header">
+                <h1 class="page-title">
+                    My <span class="gradient-text">Blogs</span>
+                </h1>
+                <p class="page-description">
+                    Insights on technology, leadership, career growth, and lessons learned from my journey in automation and digital transformation
+                </p>
+            </div>
+
+            <!-- Category Filter -->
+            <div class="filter-container">
+                <button class="filter-btn active" data-category="all">All</button>
+                <button class="filter-btn" data-category="technology">Technology</button>
+                <button class="filter-btn" data-category="leadership">Leadership</button>
+                <button class="filter-btn" data-category="career">Career Growth</button>
+                <button class="filter-btn" data-category="automation">Automation</button>
+                <button class="filter-btn" data-category="ai">Artificial Intelligence</button>
+            </div>
+
+            <!-- Blog Grid -->
+            <div class="blog-grid">	
+                <!-- Blog Post 4 - AI Terms -->
+                <article class="blog-card" data-category="ai">
+                    <div class="blog-image">
+                        <img src="./Blogs/Blog_4/Post_4_Image.jpeg" alt="AI Terms & Agent">
+                        <div class="blog-category">Artificial Intelligence</div>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-date">
+                                <i data-lucide="calendar"></i>
+                                June 29, 2025
+                            </span>
+                            <span class="blog-read-time">
+                                <i data-lucide="clock"></i>
+                                9 min read
+                            </span>
+                        </div>
+                        <h3 class="blog-title">AI Terms Every IT Professional Should Know (2025 & Beyond)</h3>
+                        <p class="blog-excerpt">This blog breaks down essential AI terms every IT professional should know to stay relevant in a rapidly evolving tech landscape. From user-facing tools to future risks like AGI, it's a practical guide to understanding and adapting to the AI era.</p>
+                        <a href="./Blogs/Blog_4/Blog_4_AI_Terms_IT_Professionals.html" class="blog-link">
+                            Read More
+                            <i data-lucide="arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Blog Post 3 - AI in Intralogistics -->
+                <article class="blog-card" data-category="ai">
+                    <div class="blog-image">
+                        <img src="./Blogs/Blog_3/Blog_3_AI-intralogistics.png" alt="AI in Intralogistics">
+                        <div class="blog-category">Artificial Intelligence</div>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-date">
+                                <i data-lucide="calendar"></i>
+                                June 26, 2025
+                            </span>
+                            <span class="blog-read-time">
+                                <i data-lucide="clock"></i>
+                                10 min read
+                            </span>
+                        </div>
+                        <h3 class="blog-title">AI in Intralogistics: Transforming Warehouse Operations</h3>
+                        <p class="blog-excerpt">Explore how AI is revolutionizing intralogistics and warehouse operations, from predictive analytics to autonomous systems and smart inventory management.</p>
+                        <a href="./Blogs/Blog_3/Blog_3_AI-intralogistics.html" class="blog-link">
+                            Read More
+                            <i data-lucide="arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Blog Post 2 - Digital Transformation -->
+                <article class="blog-card" data-category="technology">
+                    <div class="blog-image">
+                        <img src="./Blogs/Blog_2/Blog_2_Gigital-transformation.png" alt="Digital Transformation">
+                        <div class="blog-category">Technology</div>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-date">
+                                <i data-lucide="calendar"></i>
+                                April 18, 2025
+                            </span>
+                            <span class="blog-read-time">
+                                <i data-lucide="clock"></i>
+                                8 min read
+                            </span>
+                        </div>
+                        <h3 class="blog-title">The Strategic Imperative of Digital Transformation</h3>
+                        <p class="blog-excerpt">Discover why digital transformation is crucial for businesses in 2025, from enhancing efficiency to driving innovation and competitive advantage.</p>
+                        <a href="./Blogs/Blog_2/Blog_2_Digital-transformation-matters.html" class="blog-link">
+                            Read More
+                            <i data-lucide="arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+				
+                <!-- Blog Post 1 - Automation Trends -->
+                <article class="blog-card" data-category="automation">
+                    <div class="blog-image">
+                        <img src="./Blogs/Blog_1/Blog_1_automation-trends.png" alt="Automation Trends 2025">
+                        <div class="blog-category">Automation</div>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-date">
+                                <i data-lucide="calendar"></i>
+                                April 3, 2025
+                            </span>
+                            <span class="blog-read-time">
+                                <i data-lucide="clock"></i>
+                                8 min read
+                            </span>
+                        </div>
+                        <h3 class="blog-title">5 Trends Revolutionizing Industrial Automation by 2025</h3>
+                        <p class="blog-excerpt">Exploring the five key trends shaping warehouse automation in 2025, from AI-driven robotics to blockchain integration in supply chains.</p>
+                        <a href="./Blogs/Blog_1/Blog_1_trends-automation-2025.html" class="blog-link">
+                            Read More
+                            <i data-lucide="arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+
+
+
+            <!-- Coming Soon Notice -->
+            <div class="coming-soon-section">
+                <div class="coming-soon-card">
+                    <h3>More Content Coming Soon!</h3>
+                    <p>
+                        I'm constantly working on new blog posts covering the latest trends in automation, 
+                        digital transformation, and leadership insights. Stay tuned for more valuable content!
+                    </p>
+                    <a href="contact.html" class="btn btn-primary">
+                        Subscribe for Updates
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-main">
+                    <h3 class="footer-title">Mohammad Parwez</h3>
+                    <p class="footer-description">
+                        Project Manager specializing in automation, intralogistics, and digital transformation.
+                    </p>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/mohammad-parwez-18bb01a7/" target="_blank" class="social-link">
+                            <i data-lucide="linkedin"></i>
+                        </a>
+                        <a href="https://www.instagram.com/themohammadparwez.1611/" target="_blank" class="social-link">
+                            <i data-lucide="Instagram"></i>
+                        </a>
+                        <a href="https://www.youtube.com/@TheMohammadParwez" target="_blank" class="social-link">
+                            <i data-lucide="youtube"></i>
+                        </a>
+                        <a href="mailto:mohammad.parwez@span-group.com" class="social-link">
+                            <i data-lucide="mail"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="journey.html">Journey</a></li>
+                        <li><a href="blogs.html">Blogs</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2025 Mohammad Parwez. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/blogs.js"></script>
+</body>
+</html>

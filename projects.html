@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | Mohammad Parwez</title>
+    <meta name="description" content="Explore Mohammad Parwez's innovative projects in automation, digital transformation, and technology integration.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="dark">
+    <!-- Navigation -->
+    <nav id="navbar" class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <div class="logo-icon">MP</div>
+                <span class="logo-text">Mohammad Parwez</span>
+            </a>
+
+            <div class="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="projects.html" class="nav-link active">Projects</a>
+                <a href="journey.html" class="nav-link">Journey</a>
+                <a href="blogs.html" class="nav-link">Blogs</a>
+                <a href="videos.html" class="nav-link">Videos</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+                
+                <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+                    <i data-lucide="sun" class="theme-icon"></i>
+                </button>
+            </div>
+
+            <div class="mobile-controls">
+                <button id="theme-toggle-mobile" class="theme-toggle" aria-label="Toggle theme">
+                    <i data-lucide="sun" class="theme-icon"></i>
+                </button>
+                <button id="mobile-menu-btn" class="mobile-menu-btn">
+                    <i data-lucide="menu" class="menu-icon"></i>
+                </button>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="mobile-menu">
+            <a href="index.html" class="mobile-nav-link">Home</a>
+            <a href="about.html" class="mobile-nav-link">About</a>
+            <a href="projects.html" class="mobile-nav-link active">Projects</a>
+            <a href="journey.html" class="mobile-nav-link">Journey</a>
+            <a href="blogs.html" class="mobile-nav-link">Blogs</a>
+            <a href="videos.html" class="mobile-nav-link">Videos</a>
+            <a href="contact.html" class="mobile-nav-link">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Projects Section -->
+    <section class="page-section">
+        <div class="container">
+            <!-- Header -->
+            <div class="page-header">
+                <h1 class="page-title">
+                    My <span class="gradient-text">Projects</span>
+                </h1>
+                <p class="page-description">
+                    Explore the innovative projects I've led in automation, digital transformation, and technology integration
+                </p>
+            </div>
+
+            <!-- Projects Container -->
+            <div class="projects-container">
+                <!-- Project 1 -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-info">
+                            <div class="project-category">Digital Transformation</div>
+                            <h3 class="project-title">Digital Transformation of Asset & Inventory Tracking</h3>
+                            <p class="project-summary">Migrating tracking systems to a web-based, real-time solution for enhanced efficiency and visibility.</p>
+                        </div>
+                        <button class="project-toggle" onclick="toggleProject(this)">
+                            <span class="toggle-text">Show More</span>
+                            <i data-lucide="chevron-down" class="toggle-icon"></i>
+                        </button>
+                    </div>
+
+                    <div class="project-technologies">
+                        <span class="tech-tag">Web Development</span>
+                        <span class="tech-tag">IoT</span>
+                        <span class="tech-tag">Real-time Analytics</span>
+                    </div>
+
+                    <div class="project-details">
+                        <div class="detail-section">
+                            <h4>✅ Project Overview</h4>
+                            <p>Leading the transformation of asset and inventory tracking systems by migrating them to a scalable, web-based platform. The current system relies on offline Windows mobile applications and thick-client software, which limits flexibility and modernization.</p>
+                        </div>
+
+                        <div class="detail-section">
+                            <h4>✅ Current Progress & Roadmap</h4>
+                            <ul>
+                                <li><strong>Asset Tracking Migration: In progress (2025 target)</strong></li>
+                                <li>Migration to the new web-based platform is in progress</li>
+                                <li>The rollout will begin with the Ministry of Finance, followed by phased deployment across all existing customers</li>
+                                <li><strong>Inventory Tracking Migration: Scheduled for 2026</strong></li>
+                            </ul>
+                        </div>
+
+                        <div class="detail-section">
+                            <h4>✅ Key Responsibilities</h4>
+                            <ul>
+                                <li><strong>Solution Architecture & System Design</strong></li>
+                                <li><strong>Technical Leadership & Collaboration</strong></li>
+                                <li><strong>Data Accuracy & Security</strong></li>
+                                <li>Ensuring seamless data migration with high accuracy</li>
+                            </ul>
+                        </div>
+
+                        <div class="detail-section">
+                            <h4>✅ Expected Impact</h4>
+                            <ul>
+                                <li><strong>Enhanced Real-Time Tracking</strong></li>
+                                <li><strong>40% Reduction in Manual Effort</strong></li>
+                                <li><strong>Seamless System Integration</strong></li>
+                                <li><strong>Future-Proof Scalability</strong></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-info">
+                            <div class="project-category">AI & Automation</div>
+                            <h3 class="project-title">Etisalat e& Smart Autonomous Store</h3>
+                            <p class="project-summary">Led Development and execution of an AI-powered, fully autonomous retail stores, integrating facial recognition and real-time inventory tracking.</p>
+                        </div>
+                        <button class="project-toggle" onclick="toggleProject(this)">
+                            <span class="toggle-text">Show More</span>
+                            <i data-lucide="chevron-down" class="toggle-icon"></i>
+                        </button>
+                    </div>
+
+                    <div class="project-technologies">
+                        <span class="tech-tag">AI</span>
+                        <span class="tech-tag">Facial Recognition</span>
+                        <span class="tech-tag">IoT</span>
+                        <span class="tech-tag">Robotics</span>
+                    </div>
+
+                    <div class="project-details">
+                        <div class="detail-section">
+                            <h4>✅ Project Overview</h4>
+                            <p>Led the design and execution of AI-powered, fully autonomous retail stores for Etisalat, integrating advanced technologies to revolutionize the customer experience. This was the first autonomous retail store implemented by a telecom company anywhere in the world.</p>
+                        </div>
+
+                        <div class="detail-section">
+                            <h4>✅ Challenges Overcome</h4>
+                            <ul>
+                                <li><strong>Tight Deadline:</strong> The project was directly linked to GITEX 2023</li>
+                                <li><strong>Extensive Integrations:</strong> Required seamless integration with over 10 different systems</li>
+                                <li><strong>Multi-System Synchronization</strong></li>
+                                <li><strong>Security and Network Stability</strong></li>
+                            </ul>
+                        </div>
+
+                        <div class="detail-section">
+                            <h4>✅ Key Responsibilities</h4>
+                            <ul>
+                                <li><strong>AI-Powered Customer Experience:</strong> Developed facial recognition systems</li>
+                                <li><strong>Advanced System Integrations:</strong> Integrated real-time tracking mechanisms</li>
+                                <li><strong>Hardware Implementation:</strong> Successfully deployed Cleveron 402 and 403 robotic solutions</li>
+                            </ul>
+                        </div>
+
+                        <div class="detail-section">
+                            <h4>✅ Achievements & Impact</h4>
+                            <ul>
+                                <li><strong>Enhanced Speed & Stability</strong></li>
+                                <li><strong>60% reduction in average transaction time</strong></li>
+                                <li><strong>25% decrease in operational costs through automation</strong></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-info">
+                            <div class="project-category">Warehouse Automation</div>
+                            <h3 class="project-title">Mondelez Bahrain Warehouse Automation</h3>
+                            <p class="project-summary">Implementation of an Automated Storage and Retrieval System (ASRS) to enhance warehouse operations, increase efficiency, and integrate with existing ERP systems.</p>
+                        </div>
+                        <button class="project-toggle" onclick="toggleProject(this)">
+                            <span class="toggle-text">Show More</span>
+                            <i data-lucide="chevron-down" class="toggle-icon"></i>
+                        </button>
+                    </div>
+
+                    <div class="project-technologies">
+                        <span class="tech-tag">ASRS</span>
+                        <span class="tech-tag">SAP Integration</span>
+                        <span class="tech-tag">Robotics</span>
+                        <span class="tech-tag">WMS</span>
+                    </div>
+
+                    <div class="project-details">
+                        <div class="detail-section">
+                            <h4>✅ Project Overview</h4>
+                            <p>The Mondelez Bahrain Warehouse Automation project involved the design, installation, and integration of an Automated Storage and Retrieval System (ASRS) to optimize warehouse processes.</p>
+                        </div>
+
+                        <div class="detail-section">
+                            <h4>✅ System Specifications</h4>
+                            <ul>
+                                <li>4 Conveyors for material movement</li>
+                                <li>2 Lifts for vertical transportation</li>
+                                <li>10 Floors for structured storage</li>
+                                <li>10 Shuttle Robots for automated retrieval</li>
+                                <li>32 Aisles per side (2 sides) per floor</li>
+                                <li>Pallet capacity of up to 1000kg</li>
+                            </ul>
+                        </div>
+
+                        <div class="detail-section">
+                            <h4>✅ Key Responsibilities</h4>
+                            <ul>
+                                <li><strong>Planning & Coordination</strong></li>
+                                <li><strong>Execution & Implementation</strong></li>
+                                <li><strong>Risk Management & Issue Resolution</strong></li>
+                                <li><strong>Performance Optimization</strong></li>
+                            </ul>
+                        </div>
+
+                        <div class="detail-section">
+                            <h4>✅ Achievements & Impact</h4>
+                            <ul>
+                                <li><strong>50% Increase in Storage Efficiency</strong></li>
+                                <li><strong>35% Improvement in Order Fulfillment Speed</strong></li>
+                                <li><strong>Reduction in Manual Handling Errors</strong></li>
+                                <li><strong>Seamless Integration with SAP</strong></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-info">
+                            <div class="project-category">Project Management</div>
+                            <h3 class="project-title">Managing Several Concurrent Assets Projects</h3>
+                            <p class="project-summary">Successfully led and managed multiple assets automation projects, streamlining supply chain and logistics operations through advanced automation solutions.</p>
+                        </div>
+                        <button class="project-toggle" onclick="toggleProject(this)">
+                            <span class="toggle-text">Show More</span>
+                            <i data-lucide="chevron-down" class="toggle-icon"></i>
+                        </button>
+                    </div>
+
+                    <div class="project-technologies">
+                        <span class="tech-tag">Project Management</span>
+                        <span class="tech-tag">Team Leadership</span>
+                        <span class="tech-tag">Process Optimization</span>
+                    </div>
+
+                    <div class="project-details">
+                        <div class="detail-section">
+                            <h4>✅ Project Overview</h4>
+                            <p>Oversaw a diverse portfolio of automation projects aimed at enhancing operational efficiency through real-time asset tracking, predictive analytics, and process optimization.</p>
+                        </div>
+
+                        <div class="detail-section">
+                            <h4>✅ Key Responsibilities</h4>
+                            <ul>
+                                <li><strong>Leadership & Team Management:</strong> Directed multiple cross-functional teams</li>
+                                <li><strong>Stakeholder Coordination:</strong> Primary liaison between teams and leadership</li>
+                                <li><strong>Project Planning & Execution:</strong> Defined scopes and timelines</li>
+                                <li><strong>Risk & Issue Management:</strong> Implemented proactive mitigation strategies</li>
+                            </ul>
+                        </div>
+
+                        <div class="detail-section">
+                            <h4>✅ Achievements & Impact</h4>
+                            <ul>
+                                <li><strong>Optimized Asset Tracking by 45%</strong></li>
+                                <li><strong>Improved Asset Utilization by 30%</strong></li>
+                                <li><strong>Managed & Led Over 30 Professionals</strong></li>
+                                <li><strong>100% On-Time Delivery</strong></li>
+                                <li><strong>Enhanced Cross-Team Collaboration</strong></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-main">
+                    <h3 class="footer-title">Mohammad Parwez</h3>
+                    <p class="footer-description">
+                        Project Manager specializing in automation, intralogistics, and digital transformation.
+                    </p>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/mohammad-parwez-18bb01a7/" target="_blank" class="social-link">
+                            <i data-lucide="linkedin"></i>
+                        </a>
+                        <a href="https://www.instagram.com/themohammadparwez.1611/" target="_blank" class="social-link">
+                            <i data-lucide="Instagram"></i>
+                        </a>
+                        <a href="https://www.youtube.com/@TheMohammadParwez" target="_blank" class="social-link">
+                            <i data-lucide="youtube"></i>
+                        </a>
+                        <a href="mailto:mohammad.parwez@span-group.com" class="social-link">
+                            <i data-lucide="mail"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="journey.html">Journey</a></li>
+                        <li><a href="blogs.html">Blogs</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2025 Mohammad Parwez. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/projects.js"></script>
+</body>
+</html>

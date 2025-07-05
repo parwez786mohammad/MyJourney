@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Videos | Mohammad Parwez</title>
+    <meta name="description" content="Watch Mohammad Parwez's engaging content on book summaries, professional insights, technology trends, and personal growth lessons.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="dark">
+    <!-- Navigation -->
+    <nav id="navbar" class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <div class="logo-icon">MP</div>
+                <span class="logo-text">Mohammad Parwez</span>
+            </a>
+
+            <div class="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="projects.html" class="nav-link">Projects</a>
+                <a href="journey.html" class="nav-link">Journey</a>
+                <a href="blogs.html" class="nav-link">Blogs</a>
+                <a href="videos.html" class="nav-link active">Videos</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+                
+                <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+                    <i data-lucide="sun" class="theme-icon"></i>
+                </button>
+            </div>
+
+            <div class="mobile-controls">
+                <button id="theme-toggle-mobile" class="theme-toggle" aria-label="Toggle theme">
+                    <i data-lucide="sun" class="theme-icon"></i>
+                </button>
+                <button id="mobile-menu-btn" class="mobile-menu-btn">
+                    <i data-lucide="menu" class="menu-icon"></i>
+                </button>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="mobile-menu">
+            <a href="index.html" class="mobile-nav-link">Home</a>
+            <a href="about.html" class="mobile-nav-link">About</a>
+            <a href="projects.html" class="mobile-nav-link">Projects</a>
+            <a href="journey.html" class="mobile-nav-link">Journey</a>
+            <a href="blogs.html" class="mobile-nav-link">Blogs</a>
+            <a href="videos.html" class="mobile-nav-link active">Videos</a>
+            <a href="contact.html" class="mobile-nav-link">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Videos Section -->
+    <section class="page-section">
+        <div class="container">
+            <!-- Header -->
+            <div class="page-header">
+                <h1 class="page-title">
+                    My <span class="gradient-text">Videos</span>
+                </h1>
+                <p class="page-description">
+                    Engaging content on book summaries, professional insights, technology trends, and personal growth lessons
+                </p>
+            </div>
+
+            <!-- Category Filter -->
+            <div class="filter-container">
+                <button class="filter-btn active" data-category="all">All</button>
+                <button class="filter-btn" data-category="book-summaries">Book Summaries</button>
+                <button class="filter-btn" data-category="tech-insights">Tech Insights</button>
+                <button class="filter-btn" data-category="career-tips">Career Tips</button>
+                <button class="filter-btn" data-category="project-management">Project Management</button>
+            </div>
+
+            <!-- Coming Soon Notice -->
+            <div class="coming-soon-notice">
+                <div class="notice-card">
+                    <h3>🎬 Coming Soon - Under Creation!</h3>
+                    <p>I'm currently working on exciting video content. Subscribe to stay updated when new videos are released!</p>
+                </div>
+            </div>
+
+            <!-- Video Grid -->
+            <div class="video-grid">
+                <!-- Video 1 -->
+                <div class="video-card" data-category="book-summaries">
+                    <div class="video-thumbnail">
+                        <img src="https://images.pexels.com/photos/3861958/pexels-photo-3861958.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Book Summary Video">
+                        <div class="video-overlay">
+                            <div class="play-button">
+                                <i data-lucide="play"></i>
+                            </div>
+                        </div>
+                        <div class="video-duration">12:45</div>
+                        <div class="coming-soon-badge">Coming Soon</div>
+                        <div class="video-category">Book Summaries</div>
+                    </div>
+                    <div class="video-content">
+                        <h3 class="video-title">Book Summary: "The Lean Startup" by Eric Ries</h3>
+                        <p class="video-description">Key insights and practical applications from this groundbreaking book on building successful startups.</p>
+                        <div class="video-meta">
+                            <span class="video-views">
+                                <i data-lucide="eye"></i>
+                                1.2K views
+                            </span>
+                            <span class="video-date">
+                                <i data-lucide="calendar"></i>
+                                Dec 1, 2024
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Video 2 -->
+                <div class="video-card" data-category="tech-insights">
+                    <div class="video-thumbnail">
+                        <img src="https://images.pexels.com/photos/7688460/pexels-photo-7688460.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Tech Insights Video">
+                        <div class="video-overlay">
+                            <div class="play-button">
+                                <i data-lucide="play"></i>
+                            </div>
+                        </div>
+                        <div class="video-duration">18:30</div>
+                        <div class="coming-soon-badge">Coming Soon</div>
+                        <div class="video-category">Tech Insights</div>
+                    </div>
+                    <div class="video-content">
+                        <h3 class="video-title">The Future of Warehouse Automation</h3>
+                        <p class="video-description">Exploring emerging technologies and trends that will shape the future of automated logistics.</p>
+                        <div class="video-meta">
+                            <span class="video-views">
+                                <i data-lucide="eye"></i>
+                                2.8K views
+                            </span>
+                            <span class="video-date">
+                                <i data-lucide="calendar"></i>
+                                Nov 25, 2024
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Video 3 -->
+                <div class="video-card" data-category="career-tips">
+                    <div class="video-thumbnail">
+                        <img src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Career Tips Video">
+                        <div class="video-overlay">
+                            <div class="play-button">
+                                <i data-lucide="play"></i>
+                            </div>
+                        </div>
+                        <div class="video-duration">22:15</div>
+                        <div class="coming-soon-badge">Coming Soon</div>
+                        <div class="video-category">Career Tips</div>
+                    </div>
+                    <div class="video-content">
+                        <h3 class="video-title">From Engineering to Project Management: My Career Journey</h3>
+                        <p class="video-description">Personal insights and advice on transitioning from technical roles to leadership positions.</p>
+                        <div class="video-meta">
+                            <span class="video-views">
+                                <i data-lucide="eye"></i>
+                                3.5K views
+                            </span>
+                            <span class="video-date">
+                                <i data-lucide="calendar"></i>
+                                Nov 20, 2024
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Video 4 -->
+                <div class="video-card" data-category="project-management">
+                    <div class="video-thumbnail">
+                        <img src="https://images.pexels.com/photos/7688336/pexels-photo-7688336.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Project Management Video">
+                        <div class="video-overlay">
+                            <div class="play-button">
+                                <i data-lucide="play"></i>
+                            </div>
+                        </div>
+                        <div class="video-duration">16:20</div>
+                        <div class="coming-soon-badge">Coming Soon</div>
+                        <div class="video-category">Project Management</div>
+                    </div>
+                    <div class="video-content">
+                        <h3 class="video-title">Managing Remote Teams in Tech Projects</h3>
+                        <p class="video-description">Best practices and tools for effectively managing distributed teams in technology projects.</p>
+                        <div class="video-meta">
+                            <span class="video-views">
+                                <i data-lucide="eye"></i>
+                                1.9K views
+                            </span>
+                            <span class="video-date">
+                                <i data-lucide="calendar"></i>
+                                Nov 15, 2024
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Video 5 -->
+                <div class="video-card" data-category="book-summaries">
+                    <div class="video-thumbnail">
+                        <img src="https://images.pexels.com/photos/3861958/pexels-photo-3861958.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Book Summary Video">
+                        <div class="video-overlay">
+                            <div class="play-button">
+                                <i data-lucide="play"></i>
+                            </div>
+                        </div>
+                        <div class="video-duration">14:50</div>
+                        <div class="coming-soon-badge">Coming Soon</div>
+                        <div class="video-category">Book Summaries</div>
+                    </div>
+                    <div class="video-content">
+                        <h3 class="video-title">Book Summary: "Atomic Habits" by James Clear</h3>
+                        <p class="video-description">Practical strategies for building good habits and breaking bad ones, applied to professional growth.</p>
+                        <div class="video-meta">
+                            <span class="video-views">
+                                <i data-lucide="eye"></i>
+                                4.1K views
+                            </span>
+                            <span class="video-date">
+                                <i data-lucide="calendar"></i>
+                                Nov 10, 2024
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Video 6 -->
+                <div class="video-card" data-category="tech-insights">
+                    <div class="video-thumbnail">
+                        <img src="https://images.pexels.com/photos/7172832/pexels-photo-7172832.jpeg?auto=compress&cs=tinysrgb&w=600" alt="AI Integration Video">
+                        <div class="video-overlay">
+                            <div class="play-button">
+                                <i data-lucide="play"></i>
+                            </div>
+                        </div>
+                        <div class="video-duration">20:45</div>
+                        <div class="coming-soon-badge">Coming Soon</div>
+                        <div class="video-category">Tech Insights</div>
+                    </div>
+                    <div class="video-content">
+                        <h3 class="video-title">AI Integration in Supply Chain Management</h3>
+                        <p class="video-description">How artificial intelligence is transforming supply chain operations and decision-making processes.</p>
+                        <div class="video-meta">
+                            <span class="video-views">
+                                <i data-lucide="eye"></i>
+                                2.3K views
+                            </span>
+                            <span class="video-date">
+                                <i data-lucide="calendar"></i>
+                                Nov 5, 2024
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Call to Action -->
+            <div class="cta-section">
+                <div class="cta-card">
+                    <h3>Subscribe for Updates</h3>
+                    <p>
+                        Be the first to know when new videos are released! I'll be sharing insights on automation, 
+                        leadership, book summaries, and career growth.
+                    </p>
+                    <a href="contact.html" class="btn btn-primary">
+                        Get Notified
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-main">
+                    <h3 class="footer-title">Mohammad Parwez</h3>
+                    <p class="footer-description">
+                        Project Manager specializing in automation, intralogistics, and digital transformation.
+                    </p>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/mohammad-parwez-18bb01a7/" target="_blank" class="social-link">
+                            <i data-lucide="linkedin"></i>
+                        </a>
+                        <a href="https://www.instagram.com/themohammadparwez.1611/" target="_blank" class="social-link">
+                            <i data-lucide="Instagram"></i>
+                        </a>
+                        <a href="https://www.youtube.com/@TheMohammadParwez" target="_blank" class="social-link">
+                            <i data-lucide="youtube"></i>
+                        </a>
+                        <a href="mailto:mohammad.parwez@span-group.com" class="social-link">
+                            <i data-lucide="mail"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="journey.html">Journey</a></li>
+                        <li><a href="blogs.html">Blogs</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2025 Mohammad Parwez. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/videos.js"></script>
+</body>
+</html>
