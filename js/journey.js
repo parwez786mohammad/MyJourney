@@ -1,5 +1,10 @@
 // Journey page functionality
 document.addEventListener('DOMContentLoaded', function() {
+    // Initialize Lucide icons
+    if (typeof lucide !== 'undefined') {
+        lucide.createIcons();
+    }
+    
     initializeTimelineToggles();
     initializeTimelineAnimations();
 });
@@ -22,33 +27,39 @@ function toggleTimelineItem(header) {
     
     if (!details || !toggle) return;
     
-    const isVisible = details.classList.contains('visible');
+    const isExpanded = details.classList.contains('expanded');
     
     // Close all other timeline items
     const allTimelineItems = document.querySelectorAll('.timeline-item');
     allTimelineItems.forEach(item => {
         if (item !== timelineItem) {
             const otherDetails = item.querySelector('.timeline-details');
-            const otherToggle = item.querySelector('.timeline-toggle i');
+            const otherToggle = item.querySelector('.timeline-toggle');
+            const otherToggleIcon = otherToggle?.querySelector('i');
             
             if (otherDetails) {
-                otherDetails.classList.remove('visible');
+                otherDetails.classList.remove('expanded');
             }
             if (otherToggle) {
-                otherToggle.style.transform = 'rotate(0deg)';
+                otherToggle.classList.remove('expanded');
+            }
+            if (otherToggleIcon) {
+                otherToggleIcon.style.transform = 'rotate(0deg)';
             }
         }
     });
     
-    if (isVisible) {
+    if (isExpanded) {
         // Hide details
-        details.classList.remove('visible');
+        details.classList.remove('expanded');
+        toggle.classList.remove('expanded');
         if (toggleIcon) {
             toggleIcon.style.transform = 'rotate(0deg)';
         }
     } else {
         // Show details
-        details.classList.add('visible');
+        details.classList.add('expanded');
+        toggle.classList.add('expanded');
         if (toggleIcon) {
             toggleIcon.style.transform = 'rotate(180deg)';
         }
