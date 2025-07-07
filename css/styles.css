@@ -752,6 +752,14 @@ h1, h2, h3, h4, h5, h6 {
     gap: 1rem;
 }
 
+@media (max-width: 768px) {
+    .project-header {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 1.5rem;
+    }
+}
+
 .project-info {
     flex: 1;
 }
@@ -790,6 +798,13 @@ h1, h2, h3, h4, h5, h6 {
     cursor: pointer;
     transition: all 0.3s ease;
     white-space: nowrap;
+    align-self: flex-start;
+}
+
+@media (max-width: 768px) {
+    .project-toggle {
+        align-self: center;
+    }
 }
 
 .project-toggle:hover {
@@ -827,10 +842,28 @@ h1, h2, h3, h4, h5, h6 {
     border-top: 1px solid rgba(6, 182, 212, 0.3);
     margin-top: 1rem;
     padding-top: 1.5rem;
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3s ease;
 }
 
 .project-details.visible {
     display: block;
+    opacity: 1;
+    max-height: 2000px;
+    animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .detail-section {
@@ -1882,6 +1915,22 @@ h1, h2, h3, h4, h5, h6 {
     
     .timeline-line {
         left: 0.75rem;
+    }
+    
+    .project-title {
+        font-size: 1.25rem;
+    }
+    
+    .project-header {
+        padding: 1.5rem;
+    }
+    
+    .project-technologies {
+        padding: 0 1.5rem 1rem;
+    }
+    
+    .project-details {
+        padding: 0 1.5rem 1.5rem;
     }
 }
 
