@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6XRXPGYE4Q"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-6XRXPGYE4Q');
+    </script>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>🧭 I Found My Purpose: To Do Justice, Not to Hate | Mohammad Parwez</title>
+    <meta name="description" content="A personal journey toward discovering life purpose through faith, justice, and mercy. Reflections on hate, responsibility, and the spiritual role of humans as caretakers." />
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="I Found My Purpose: To Do Justice, Not to Hate" />
+    <meta property="og:description" content="A personal journey toward discovering life purpose through faith, justice, and mercy." />
+    <meta property="og:image" content="./Blog_6_Image.jpeg" />
+    <meta property="og:type" content="article" />
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="I Found My Purpose: To Do Justice, Not to Hate" />
+    <meta name="twitter:description" content="A personal journey toward discovering life purpose through faith, justice, and mercy." />
+    <meta name="twitter:image" content="./Blog_6_Image.jpeg" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+ 
+    <link rel="stylesheet" href="../../css/styles.css" />
+
+    <style>
+        :root {
+            --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --secondary-gradient: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            --accent-gradient: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            --warm-gradient: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+            --cool-gradient: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+            --text-primary: #1a202c;
+            --text-secondary: #4a5568;
+            --text-muted: #718096;
+            --border-light: #e2e8f0;
+            --bg-light: #f7fafc;
+            --bg-card: #ffffff;
+            --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
+            --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.1);
+            --shadow-xl: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .dark {
+            --text-primary: #f7fafc;
+            --text-secondary: #e2e8f0;
+            --text-muted: #a0aec0;
+            --border-light: #2d3748;
+            --bg-light: #1a202c;
+            --bg-card: #2d3748;
+            --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.3);
+            --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.3);
+            --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.3);
+            --shadow-xl: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .blog-article {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+            position: relative;
+        }
+        
+        .back-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 1rem 2rem;
+            background: var(--primary-gradient);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            margin-bottom: 3rem;
+            border: none;
+            cursor: pointer;
+            box-shadow: var(--shadow-md);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .back-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.5s;
+        }
+        
+        .back-button:hover::before {
+            left: 100%;
+        }
+        
+        .back-button:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .blog-header {
+            text-align: center;
+            margin-bottom: 4rem;
+            padding: 3rem 0;
+            position: relative;
+        }
+        
+        .blog-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: var(--primary-gradient);
+            border-radius: 2px;
+        }
+        
+        .blog-title {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            font-weight: 800;
+            line-height: 1.1;
+            margin: 2rem 0 2rem 0;
+            color: var(--text-primary);
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            position: relative;
+        }
+        
+        .blog-meta {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+        
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            color: var(--text-muted);
+            font-size: 1rem;
+            font-weight: 500;
+            padding: 0.75rem 1.5rem;
+            background: var(--bg-card);
+            border-radius: 25px;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--border-light);
+        }
+        
+        .meta-item i {
+            color: #667eea;
+        }
+        
+        .blog-hero-container {
+            text-align: center;
+            margin: 4rem 0;
+            position: relative;
+        }
+        
+        .blog-hero-container::before {
+            content: '';
+            position: absolute;
+            top: -20px;
+            left: -20px;
+            right: -20px;
+            bottom: -20px;
+            background: var(--primary-gradient);
+            border-radius: 2rem;
+            opacity: 0.1;
+            z-index: -1;
+        }
+        
+        .blog-hero {
+            max-width: 100%;
+            height: auto;
+            border-radius: 1.5rem;
+            box-shadow: var(--shadow-xl);
+            transition: transform 0.3s ease;
+        }
+        
+        .blog-hero:hover {
+            transform: scale(1.02);
+        }
+        
+        .blog-content {
+            line-height: 1.8;
+            font-size: 1.125rem;
+            color: var(--text-secondary);
+        }
+        
+        .blog-content h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            font-weight: 700;
+            margin: 4rem 0 2rem 0;
+            color: var(--text-primary);
+            position: relative;
+            padding-left: 2rem;
+        }
+        
+        .blog-content h3::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 4px;
+            height: 60%;
+            background: var(--primary-gradient);
+            border-radius: 2px;
+        }
+        
+        .blog-content p {
+            margin-bottom: 2rem;
+            color: var(--text-secondary);
+            text-align: justify;
+        }
+        
+        .blog-content p strong {
+            color: var(--text-primary);
+            font-weight: 700;
+        }
+        
+        .blog-content ul {
+            margin: 2rem 0;
+            padding-left: 0;
+            list-style: none;
+        }
+        
+        .blog-content li {
+            margin-bottom: 1rem;
+            color: var(--text-secondary);
+            position: relative;
+            padding-left: 2rem;
+            padding: 1rem 1rem 1rem 3rem;
+            background: var(--bg-card);
+            border-radius: 12px;
+            box-shadow: var(--shadow-sm);
+            border-left: 4px solid #667eea;
+            margin-bottom: 1rem;
+            transition: all 0.3s ease;
+        }
+        
+        .blog-content li::before {
+            content: '✓';
+            position: absolute;
+            left: 1rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #667eea;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+        
+        .blog-content li:hover {
+            transform: translateX(5px);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .blog-content blockquote {
+            background: var(--bg-card);
+            border-left: 6px solid #667eea;
+            margin: 3rem 0;
+            padding: 2rem;
+            border-radius: 0 15px 15px 0;
+            font-style: italic;
+            font-size: 1.2rem;
+            line-height: 1.6;
+            color: var(--text-primary);
+            box-shadow: var(--shadow-md);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .blog-content blockquote::before {
+            content: '"';
+            position: absolute;
+            top: -10px;
+            left: 20px;
+            font-size: 4rem;
+            color: #667eea;
+            opacity: 0.3;
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .highlight-box {
+            background: var(--primary-gradient);
+            color: white;
+            padding: 2.5rem;
+            border-radius: 20px;
+            margin: 3rem 0;
+            box-shadow: var(--shadow-lg);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .highlight-box::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+        }
+        
+        .highlight-box h4 {
+            margin: 0 0 1.5rem 0;
+            font-size: 1.5rem;
+            font-weight: 700;
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .highlight-box p {
+            margin: 0;
+            font-size: 1.2rem;
+            line-height: 1.6;
+        }
+        
+        .purpose-statement {
+            background: var(--cool-gradient);
+            padding: 3rem;
+            border-radius: 25px;
+            margin: 4rem 0;
+            text-align: center;
+            box-shadow: var(--shadow-lg);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .purpose-statement::before {
+            content: '🌟';
+            position: absolute;
+            top: 1rem;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 2rem;
+        }
+        
+        .purpose-statement p {
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: #2d3748;
+            margin: 0;
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .author-signature {
+            text-align: center;
+            margin-top: 4rem;
+            padding: 2rem;
+            background: var(--bg-card);
+            border-radius: 20px;
+            box-shadow: var(--shadow-md);
+            border: 1px solid var(--border-light);
+        }
+        
+        .author-signature p {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin: 0;
+            font-family: 'Playfair Display', serif;
+        }
+        
+        /* Scroll Progress Bar */
+        .scroll-progress {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 0%;
+            height: 4px;
+            background: var(--primary-gradient);
+            z-index: 1000;
+            transition: width 0.1s ease;
+        }
+        
+        /* Reading Time Indicator */
+        .reading-progress {
+            position: fixed;
+            top: 50%;
+            right: 2rem;
+            transform: translateY(-50%);
+            width: 4px;
+            height: 200px;
+            background: var(--border-light);
+            border-radius: 2px;
+            z-index: 100;
+        }
+        
+        .reading-progress::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 0%;
+            background: var(--primary-gradient);
+            border-radius: 2px;
+            transition: height 0.1s ease;
+        }
+        
+        /* Mobile responsiveness */
+        @media (max-width: 768px) {
+            .blog-article {
+                padding: 1rem 0.75rem;
+            }
+            
+            .blog-title {
+                font-size: 2.5rem;
+            }
+            
+            .blog-meta {
+                gap: 1rem;
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .blog-content {
+                font-size: 1rem;
+            }
+            
+            .blog-content h3 {
+                font-size: 1.5rem;
+                padding-left: 1.5rem;
+            }
+            
+            .blog-content li {
+                padding: 1rem 1rem 1rem 2.5rem;
+            }
+            
+            .blog-content blockquote {
+                padding: 1.5rem;
+                font-size: 1.1rem;
+            }
+            
+            .highlight-box {
+                padding: 2rem;
+            }
+            
+            .purpose-statement {
+                padding: 2rem;
+            }
+            
+            .reading-progress {
+                display: none;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .blog-title {
+                font-size: 2rem;
+            }
+            
+            .back-button {
+                padding: 0.75rem 1.5rem;
+                font-size: 0.9rem;
+            }
+            
+            .blog-content h3 {
+                font-size: 1.3rem;
+            }
+        }
+        
+        /* Animation for elements coming into view */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+        
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Dark mode enhancements */
+        .dark .blog-title {
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .dark .purpose-statement {
+            background: var(--primary-gradient);
+            color: white;
+        }
+        
+        .dark .purpose-statement p {
+            color: white;
+        }
+    </style>
+</head>
+
+<body class="dark">
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+    
+    <!-- Reading Progress Indicator -->
+    <div class="reading-progress" id="readingProgress"></div>
+
+    <!-- Navigation -->
+    <nav id="navbar" class="navbar">
+        <div class="nav-container">
+            <a href="../../index.html" class="nav-logo">
+                <div class="logo-icon">MP</div>
+                <span class="logo-text">Mohammad Parwez</span>
+            </a>
+
+            <div class="nav-menu">
+                <a href="../../index.html" class="nav-link">Home</a>
+                <a href="../../about.html" class="nav-link">About</a>
+                <a href="../../projects.html" class="nav-link">Projects</a>
+                <a href="../../journey.html" class="nav-link">Journey</a>
+                <a href="../../blogs.html" class="nav-link active">Blogs</a>
+                <a href="../../videos.html" class="nav-link">Videos</a>
+                <a href="../../contact.html" class="nav-link">Contact</a>
+                
+                <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+                    <i data-lucide="sun" class="theme-icon"></i>
+                </button>
+            </div>
+
+            <div class="mobile-controls">
+                <button id="theme-toggle-mobile" class="theme-toggle" aria-label="Toggle theme">
+                    <i data-lucide="sun" class="theme-icon"></i>
+                </button>
+                <button id="mobile-menu-btn" class="mobile-menu-btn">
+                    <i data-lucide="menu" class="menu-icon"></i>
+                </button>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="mobile-menu">
+            <a href="../../index.html" class="mobile-nav-link">Home</a>
+            <a href="../../about.html" class="mobile-nav-link">About</a>
+            <a href="../../projects.html" class="mobile-nav-link">Projects</a>
+            <a href="../../journey.html" class="mobile-nav-link">Journey</a>
+            <a href="../../blogs.html" class="mobile-nav-link active">Blogs</a>
+            <a href="../../videos.html" class="mobile-nav-link">Videos</a>
+            <a href="../../contact.html" class="mobile-nav-link">Contact</a>
+        </div>
+    </nav>
+
+    <section class="section">
+        <div class="container">
+            <div class="blog-article">
+                <a href="../../blogs.html" class="back-button fade-in">
+                    <i data-lucide="arrow-left"></i>
+                    Back to All Posts
+                </a>
+
+                <header class="blog-header fade-in">
+                    <h1 class="blog-title">🧭 I Found My Purpose: To Do Justice, Not to Hate</h1>
+                    <div class="blog-meta">
+                        <span class="meta-item">
+                            <i data-lucide="calendar"></i>
+                            July 11, 2025
+                        </span>
+                        <span class="meta-item">
+                            <i data-lucide="clock"></i>
+                            7 min read
+                        </span>
+                    </div>
+                </header>
+
+                <!-- Hero Image -->
+                <div class="blog-hero-container fade-in">
+                    <img src="./Blog_6_Image.jpeg" alt="My Purpose of Life - A person standing at crossroads under starry sky" class="blog-hero">
+                </div>
+
+                <div class="blog-content">
+                    <p class="fade-in">Like many people, I've always struggled with a simple yet deeply personal question:</p>
+                    
+                    <div class="purpose-statement fade-in">
+                        <p><strong>Why am I here? Why I was born?</strong></p>
+                    </div>
+                    
+                    <p class="fade-in">Not in a religious ritualistic sense. Not in a philosophical or poetic way.<br>
+                    But in a raw, human, everyday way.<br>
+                    What's my role in this world? What am I supposed to be doing… really?</p>
+
+                    <p class="fade-in">And after years of searching, observing, listening, and failing — I think, I finally arrived at a conviction that gives me clarity, calm, and direction:</p>
+                    
+                    <div class="highlight-box fade-in">
+                        <h4>💡 My Realization</h4>
+                        <p>I am a Khalifa, sent to this planet like all others — a responsible human being. My purpose is to do justice in everything I touch.</p>
+                    </div>
+
+                    <h3 class="fade-in">🌍 What It Means to Be a Khalifa</h3>
+                    <p class="fade-in">In the Qur'an, when God created the first human, He said to the angels:</p>
+                    
+                    <blockquote class="fade-in">"Indeed, I will place upon the earth a Khalifa (a caretaker, steward, vicegerent)." — Qur'an 2:30</blockquote>
+                    
+                    <p class="fade-in">I think, to me, this wasn't just about Adam. It was about all of us. You. Me. Everyone.</p>
+                    <p class="fade-in">We are not just consumers or employees or parents or professionals. We are guardians of everything around us — our actions, our relationships, our words, our work, our planet, and our inner selves.</p>
+
+                    <h3 class="fade-in">⚖️ Justice Isn't Just About Courts</h3>
+                    <p class="fade-in">When I realized that my job on Earth is to "do justice," I had to rethink what justice really means.</p>
+                    <p class="fade-in">Justice isn't some legal term buried in law books. It's about doing what's right — even when no one is watching. It's about being fair, being honest, being humble, and being kind, especially when it's hard.</p>
+                    
+                    <ul class="fade-in">
+                        <li>Justice is showing up on time because you respect others' time.</li>
+                        <li>It's not gossiping because reputations are sacred.</li>
+                        <li>It's not raising your voice at home, because power doesn't give you the right to hurt.</li>
+                        <li>It's being fair when giving feedback, closing a deal, helping a stranger, or choosing words in a disagreement.</li>
+                    </ul>
+                    
+                    <blockquote class="fade-in">"O you who believe! Stand firmly for justice, even if it is against yourselves, your parents, or your relatives." — Qur'an 4:135</blockquote>
+                    <blockquote class="fade-in">"Learn to do right; seek justice. Defend the oppressed." — Isaiah 1:17 (Bible)</blockquote>
+
+                    <h3 class="fade-in">💡 The Gift and Burden of Free Will</h3>
+                    <p class="fade-in">So why did God make us different?</p>
+                    <p class="fade-in">Why not just make us like animals — free from worry, responsibility, guilt?</p>
+                    <p class="fade-in">Because we were given free will — the ability to think, feel, decide, and choose. We were trusted with moral responsibility.</p>
+                    
+                    <blockquote class="fade-in">"And We showed him the two paths." — Qur'an 90:10</blockquote>
+                    
+                    <p class="fade-in">We are the only beings on this planet who can reflect, who can say no to evil, who can apologize, who can forgive, and who can choose justice over comfort. That's the test. That's the meaning of life.</p>
+
+                    <h3 class="fade-in">🧠 The Poison of Hate: A Shortcut to Injustice</h3>
+                    <p class="fade-in">We live in a world that's becoming angrier by the day. People hate others because of skin, sect, country, opinion, or even a post they saw online. We hate people who hate others — and somehow think it's okay. But it's not.</p>
+                    
+                    <blockquote class="fade-in">If you hate someone because they hate others, you have become the same.</blockquote>
+                    <blockquote class="fade-in">"Do not let the hatred of a people prevent you from being just. Be just — that is closer to righteousness." — Qur'an 5:8</blockquote>
+                    <blockquote class="fade-in">"But I say to you, love your enemies and pray for those who persecute you." — Matthew 5:44 (Bible)</blockquote>
+                    
+                    <p class="fade-in">Real strength is not in anger. It's in restraint. Real courage is not in shouting. It's in being fair, even when your soul craves revenge.</p>
+
+                    <h3 class="fade-in">🛤️ How This Changed Me</h3>
+                    <p class="fade-in">I think when I understood this, something shifted. I started seeing every interaction as a chance to do justice — from the way I handled feedback at work, to how I dealt with people I disliked, to how I managed my own ego at home.</p>
+                    
+                    <ul class="fade-in">
+                        <li>When I'm in a tough meeting, my job isn't to win. It's to be just.</li>
+                        <li>When I face someone who's wronged me, my job isn't to hate. It's to be just.</li>
+                        <li>When I see something unfair, my job isn't to look away. It's to be just.</li>
+                    </ul>
+                    
+                    <p class="fade-in">No one told me this. I didn't find it in a viral video. I learned it through reflection, faith, and falling short enough times to finally listen to my conscience.</p>
+
+                    <h3 class="fade-in">🎁 So... What Is the Purpose of Life?</h3>
+                    <p class="fade-in">For me, it's simple now.</p>
+                    <p class="fade-in">The purpose of life is to live with moral clarity. To serve with fairness. To resist hatred. To elevate your soul. And to leave the world better than you found it.</p>
+                    <p class="fade-in">And guess what? This isn't just a religious idea. It's human.</p>
+                    
+                    <blockquote class="fade-in">"I did not create jinn and mankind except to worship Me." — Qur'an 51:56</blockquote>
+					
+					<blockquote class="fade-in">"What does the Lord require of you? To act justly, love mercy, and walk humbly with your God." — Micah 6:8 (Bible)</blockquote>
+                                        
+                    <p class="fade-in">True worship isn't just rituals. It's doing right when it's hard. It's being right when no one expects you to be. That's justice. That's purpose.</p>
+
+                    <h3 class="fade-in">✨ Final Takeaway: The World Doesn't Need More Opinions</h3>
+                    <p class="fade-in">It needs more people who:</p>
+                    
+                    <ul class="fade-in">
+                        <li>Speak truth without shouting</li>
+                        <li>Disagree without hate</li>
+                        <li>Help without recognition</li>
+                        <li>Walk away from ego</li>
+                        <li>Practice quiet justice</li>
+                    </ul>
+                    
+                    <p class="fade-in">If you're still wondering about your purpose — know this:</p>
+                    
+                    <div class="highlight-box fade-in">
+                        <h4>🌟 Remember This</h4>
+                        <p>You are already chosen. You are already trusted. You are already a Khalifa.</p>
+                    </div>
+                    
+                    <p class="fade-in">So don't wait for a sign. Don't wait for perfection. Just start with your next choice.</p>
+                    <p class="fade-in"><strong>Because in that moment — you fulfill your purpose.</strong></p>
+                    
+                    <div class="author-signature fade-in">
+                        <p>— Mohammad Parwez</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+ 
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-main">
+                    <h3 class="footer-title">Mohammad Parwez</h3>
+                    <p class="footer-description">
+                        Project Manager specializing in automation, intralogistics, and digital transformation.
+                    </p>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/mohammad-parwez-18bb01a7/" target="_blank" class="social-link">
+                            <i data-lucide="linkedin"></i>
+                        </a>
+                        <a href="https://www.instagram.com/themohammadparwez.1611/" target="_blank" class="social-link">
+                            <i data-lucide="Instagram"></i>
+                        </a>
+                        <a href="https://www.youtube.com/@TheMohammadParwez" target="_blank" class="social-link">
+                            <i data-lucide="youtube"></i>
+                        </a>
+                        <a href="mailto:mohammad.parwez@span-group.com" class="social-link">
+                            <i data-lucide="mail"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="../../about.html">About</a></li>
+                        <li><a href="../../projects.html">Projects</a></li>
+                        <li><a href="../../journey.html">Journey</a></li>
+                        <li><a href="../../blogs.html">Blogs</a></li>
+                        <li><a href="../../contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2025 Mohammad Parwez. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <script src="../../js/main.js"></script>
+    <script src="../../js/blogs.js"></script>
+    
+    <script>
+        // Scroll Progress Bar
+        window.addEventListener('scroll', () => {
+            const scrollProgress = document.getElementById('scrollProgress');
+            const readingProgress = document.getElementById('readingProgress');
+            const scrollTop = window.pageYOffset;
+            const docHeight = document.body.scrollHeight - window.innerHeight;
+            const scrollPercent = (scrollTop / docHeight) * 100;
+            
+            scrollProgress.style.width = scrollPercent + '%';
+            if (readingProgress) {
+                readingProgress.style.setProperty('--progress', scrollPercent + '%');
+            }
+        });
+
+        // Fade in animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all fade-in elements
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Initialize Lucide icons
+        if (typeof lucide !== 'undefined') {
+            lucide.createIcons();
+        }
+    </script>
+    
+    <style>
+        .reading-progress::before {
+            height: var(--progress, 0%);
+        }
+    </style>
+</body>
+</html>
