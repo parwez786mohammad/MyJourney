@@ -2072,6 +2072,316 @@ body.light .footer-bottom {
     border-top-color: #cbd5e1;
 }
 
+/* Journey Page Styles */
+.journey-timeline {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem 0;
+}
+
+.journey-card {
+    background: linear-gradient(135deg, rgba(6, 182, 212, 0.05), rgba(139, 92, 246, 0.05));
+    border: 1px solid rgba(6, 182, 212, 0.3);
+    border-radius: 1rem;
+    margin-bottom: 2rem;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.journey-card:hover {
+    border-color: rgba(6, 182, 212, 0.5);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(6, 182, 212, 0.1);
+}
+
+.journey-badge {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.journey-badge.current {
+    background: linear-gradient(135deg, #10b981, #059669);
+    color: white;
+}
+
+.journey-badge.growth {
+    background: linear-gradient(135deg, #06b6d4, #0891b2);
+    color: white;
+}
+
+.journey-badge.first {
+    background: linear-gradient(135deg, #8b5cf6, #7c3aed);
+    color: white;
+}
+
+.journey-badge.development {
+    background: linear-gradient(135deg, #f59e0b, #d97706);
+    color: white;
+}
+
+.journey-badge.first-job {
+    background: linear-gradient(135deg, #ec4899, #db2777);
+    color: white;
+}
+
+.journey-badge.education {
+    background: linear-gradient(135deg, #3b82f6, #2563eb);
+    color: white;
+}
+
+.journey-badge.learning {
+    background: linear-gradient(135deg, #84cc16, #65a30d);
+    color: white;
+}
+
+.journey-badge.beginning {
+    background: linear-gradient(135deg, #f97316, #ea580c);
+    color: white;
+}
+
+.journey-header {
+    padding: 2rem 2rem 1rem;
+}
+
+.journey-period {
+    display: inline-block;
+    background: rgba(6, 182, 212, 0.1);
+    color: #06b6d4;
+    padding: 0.25rem 0.75rem;
+    border-radius: 0.375rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+}
+
+.journey-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 0.75rem;
+    padding-right: 6rem;
+}
+
+.journey-company {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #cbd5e1;
+    font-size: 0.875rem;
+    margin-bottom: 0.5rem;
+}
+
+.journey-company i {
+    width: 1rem;
+    height: 1rem;
+    color: #06b6d4;
+}
+
+.journey-content {
+    padding: 0 2rem 2rem;
+}
+
+.journey-summary {
+    color: #94a3b8;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+}
+
+.journey-toggle {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: linear-gradient(135deg, #06b6d4, #8b5cf6);
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-bottom: 1rem;
+}
+
+.journey-toggle:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(6, 182, 212, 0.3);
+}
+
+.journey-toggle:focus {
+    outline: 2px solid #06b6d4;
+    outline-offset: 2px;
+}
+
+.journey-toggle i {
+    transition: transform 0.3s ease;
+}
+
+.journey-toggle.expanded i {
+    transform: rotate(180deg);
+}
+
+.journey-details {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    transition: all 0.4s ease;
+    background: rgba(6, 182, 212, 0.02);
+    border-top: 1px solid rgba(6, 182, 212, 0.1);
+    margin-top: 1rem;
+}
+
+.journey-details.expanded {
+    opacity: 1;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
+.detail-section {
+    margin-bottom: 1.5rem;
+}
+
+.detail-section:last-child {
+    margin-bottom: 0;
+}
+
+.detail-section h4 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: white;
+    margin-bottom: 0.75rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid rgba(6, 182, 212, 0.3);
+    display: inline-block;
+}
+
+.detail-section p {
+    color: #cbd5e1;
+    line-height: 1.7;
+    margin-bottom: 1rem;
+}
+
+.detail-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.detail-section li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 0.75rem;
+    color: #cbd5e1;
+    line-height: 1.6;
+}
+
+.detail-section li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #06b6d4;
+    font-weight: bold;
+}
+
+.detail-section strong {
+    color: white;
+}
+
+/* Mobile Responsiveness for Journey */
+@media (max-width: 768px) {
+    .journey-timeline {
+        padding: 1rem 0;
+    }
+    
+    .journey-header {
+        padding: 1.5rem 1.5rem 1rem;
+    }
+    
+    .journey-content {
+        padding: 0 1.5rem 1.5rem;
+    }
+    
+    .journey-title {
+        font-size: 1.25rem;
+        padding-right: 4rem;
+    }
+    
+    .journey-badge {
+        top: 0.75rem;
+        right: 0.75rem;
+        font-size: 0.7rem;
+        padding: 0.2rem 0.5rem;
+    }
+    
+    .journey-company {
+        flex-wrap: wrap;
+        gap: 0.25rem;
+    }
+    
+    .journey-toggle {
+        padding: 0.5rem 1rem;
+        font-size: 0.875rem;
+    }
+    
+    .detail-section h4 {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .journey-header {
+        padding: 1rem 1rem 0.75rem;
+    }
+    
+    .journey-content {
+        padding: 0 1rem 1rem;
+    }
+    
+    .journey-title {
+        font-size: 1.125rem;
+        padding-right: 3.5rem;
+    }
+    
+    .journey-badge {
+        font-size: 0.65rem;
+        padding: 0.15rem 0.4rem;
+    }
+}
+
+/* Light Theme Overrides for Journey */
+body.light .journey-card {
+    background: linear-gradient(135deg, rgba(6, 182, 212, 0.1), rgba(139, 92, 246, 0.1));
+    border-color: rgba(6, 182, 212, 0.4);
+}
+
+body.light .journey-title,
+body.light .detail-section h4,
+body.light .detail-section strong {
+    color: #1e293b;
+}
+
+body.light .journey-company,
+body.light .journey-summary,
+body.light .detail-section p,
+body.light .detail-section li {
+    color: #475569;
+}
+
+body.light .journey-details {
+    background: rgba(6, 182, 212, 0.05);
+    border-top-color: rgba(6, 182, 212, 0.2);
+}
+
 /* ADDITIONAL MOBILE MENU FIXES */
 @media (max-width: 767px) {
     .mobile-menu {
