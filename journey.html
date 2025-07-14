@@ -195,18 +195,18 @@ gtag('config', 'G-6XRXPGYE4Q');
             transform: rotate(180deg) scale(1.1);
         }
         
-        .timeline-details {
-            padding: 0 1.5rem;
-            max-height: 0;
-            overflow: hidden;
-            transition: all 0.4s ease;
-            background: var(--card-bg-secondary);
-        }
-        
-        .timeline-details.expanded {
-            max-height: 2000px;
-            padding: 1.5rem;
-        }
+         .timeline-details {
+             padding: 0 1.5rem;
+             max-height: 0;
+             overflow: hidden;
+             transition: max-height 0.4s ease, padding 0.4s ease;
+             background: var(--card-bg-secondary);
+         }
+         
+         .timeline-details.expanded {
+             max-height: none;
+             padding: 1.5rem;
+         }
         
         .timeline-details h4 {
             color: var(--text-primary);
