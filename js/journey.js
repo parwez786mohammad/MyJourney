@@ -2,100 +2,93 @@
 document.addEventListener('DOMContentLoaded', function() {
     console.log('Journey page loaded');
     
-    // Initialize Lucide icons
+    // Initialize Lucide icons first
     if (typeof lucide !== 'undefined') {
         lucide.createIcons();
         console.log('Lucide icons initialized');
     }
     
-    // Initialize journey functionality
-    initializeJourneyToggles();
-    initializeJourneyAnimations();
+    // Small delay to ensure DOM is fully ready
+    setTimeout(() => {
+        initializeJourneyToggles();
+        initializeJourneyAnimations();
+    }, 100);
 });
 
 // Initialize journey toggle functionality
 function initializeJourneyToggles() {
     console.log('Initializing journey toggles...');
     
-    // Set initial state for all details - COLLAPSED
+    // Get all journey cards and details
     const allDetails = document.querySelectorAll('.journey-details');
     const allButtons = document.querySelectorAll('.journey-toggle');
     
     console.log(`Found ${allDetails.length} detail sections and ${allButtons.length} toggle buttons`);
     
+    // FORCE all details to be collapsed initially
     allDetails.forEach((details, index) => {
-        // Force collapsed state
-        details.style.maxHeight = '0';
+        details.style.maxHeight = '0px';
         details.style.opacity = '0';
-        details.style.paddingTop = '0';
-        details.style.paddingBottom = '0';
+        details.style.paddingTop = '0px';
+        details.style.paddingBottom = '0px';
         details.style.overflow = 'hidden';
         details.style.transition = 'all 0.4s ease';
         details.classList.remove('expanded');
         
-        console.log(`Detail section ${index} set to collapsed state`);
+        console.log(`Detail section ${index} forced to collapsed state`);
     });
     
+    // Reset all buttons to initial state
     allButtons.forEach((button, index) => {
-        // Reset button state
         button.classList.remove('expanded');
-        const buttonText = button.querySelector('span');
-        const buttonIcon = button.querySelector('i');
-        
-        if (buttonText) {
-            buttonText.textContent = 'View Details';
-        }
+        const buttonIcon = button.querySelector('.toggle-icon');
         if (buttonIcon) {
             buttonIcon.style.transform = 'rotate(0deg)';
         }
-        
         console.log(`Button ${index} reset to initial state`);
     });
     
-    // Add click event listeners to toggle buttons
-    const toggleButtons = document.querySelectorAll('.journey-toggle');
-    toggleButtons.forEach((button, index) => {
-        // Remove any existing event listeners
-        button.replaceWith(button.cloneNode(true));
-    });
-    
-    // Re-select buttons after cloning (to remove old listeners)
-    const freshButtons = document.querySelectorAll('.journey-toggle');
-    freshButtons.forEach((button, index) => {
-        button.addEventListener('click', function(e) {
-            e.preventDefault();
-            e.stopPropagation();
-            console.log(`Toggle button ${index} clicked`);
-            toggleJourneyDetails(this);
-        });
+    // Add click event listeners to journey cards (clicking anywhere on header)
+    const journeyCards = document.querySelectorAll('.journey-card');
+    journeyCards.forEach((card, index) => {
+        const header = card.querySelector('.journey-header');
+        const button = card.querySelector('.journey-toggle');
         
-        console.log(`Event listener added to button ${index}`);
+        if (header && button) {
+            // Remove any existing event listeners by cloning
+            const newHeader = header.cloneNode(true);
+            header.parentNode.replaceChild(newHeader, header);
+            
+            // Add click event to the new header
+            newHeader.addEventListener('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                console.log(`Journey card ${index} clicked`);
+                toggleJourneyDetails(card);
+            });
+            
+            console.log(`Event listener added to journey card ${index}`);
+        }
     });
     
-    console.log(`Initialized ${freshButtons.length} journey toggle buttons`);
+    console.log(`Initialized ${journeyCards.length} journey cards`);
 }
 
 // Toggle journey details function
-function toggleJourneyDetails(button) {
-    console.log('Toggle function called');
+function toggleJourneyDetails(journeyCard) {
+    console.log('Toggle function called for card:', journeyCard);
     
-    if (!button) {
-        console.warn('Toggle button not found');
-        return;
-    }
-    
-    const journeyCard = button.closest('.journey-card');
     if (!journeyCard) {
         console.warn('Journey card not found');
         return;
     }
     
     const details = journeyCard.querySelector('.journey-details');
-    const icon = button.querySelector('i');
-    const buttonText = button.querySelector('span');
+    const button = journeyCard.querySelector('.journey-toggle');
+    const icon = button?.querySelector('.toggle-icon');
     
-    if (!details) {
-        console.warn('Journey details not found');
+    if (!details || !button) {
+        console.warn('Journey details or button not found');
         return;
     }
     
@@ -108,25 +101,21 @@ function toggleJourneyDetails(button) {
         if (card !== journeyCard) {
             const otherDetails = card.querySelector('.journey-details');
             const otherButton = card.querySelector('.journey-toggle');
-            const otherIcon = otherButton?.querySelector('i');
-            const otherButtonText = otherButton?.querySelector('span');
+            const otherIcon = otherButton?.querySelector('.toggle-icon');
             
             if (otherDetails && otherDetails.classList.contains('expanded')) {
                 // Collapse other items
                 otherDetails.classList.remove('expanded');
-                otherDetails.style.maxHeight = '0';
+                otherDetails.style.maxHeight = '0px';
                 otherDetails.style.opacity = '0';
-                otherDetails.style.paddingTop = '0';
-                otherDetails.style.paddingBottom = '0';
+                otherDetails.style.paddingTop = '0px';
+                otherDetails.style.paddingBottom = '0px';
                 
                 if (otherButton) {
                     otherButton.classList.remove('expanded');
                 }
                 if (otherIcon) {
                     otherIcon.style.transform = 'rotate(0deg)';
-                }
-                if (otherButtonText) {
-                    otherButtonText.textContent = 'View Details';
                 }
                 
                 console.log('Collapsed other expanded item');
@@ -136,50 +125,44 @@ function toggleJourneyDetails(button) {
     
     if (isExpanded) {
         // Collapse current item
+        console.log('Collapsing current item');
         details.classList.remove('expanded');
-        details.style.maxHeight = '0';
+        details.style.maxHeight = '0px';
         details.style.opacity = '0';
-        details.style.paddingTop = '0';
-        details.style.paddingBottom = '0';
+        details.style.paddingTop = '0px';
+        details.style.paddingBottom = '0px';
         
         button.classList.remove('expanded');
         if (icon) {
             icon.style.transform = 'rotate(0deg)';
         }
-        if (buttonText) {
-            buttonText.textContent = 'View Details';
-        }
         
         console.log('Collapsed journey details');
     } else {
         // Expand current item
-        details.classList.add('expanded');
+        console.log('Expanding current item');
         
-        // Calculate the actual height needed
-        details.style.maxHeight = 'none';
+        // First, set padding and get natural height
         details.style.paddingTop = '1.5rem';
         details.style.paddingBottom = '1.5rem';
+        details.style.maxHeight = 'none';
         const scrollHeight = details.scrollHeight;
-        details.style.maxHeight = '0';
+        details.style.maxHeight = '0px';
         
         // Force reflow
         details.offsetHeight;
         
         // Now animate to the calculated height
+        details.classList.add('expanded');
         details.style.maxHeight = scrollHeight + 'px';
         details.style.opacity = '1';
-        details.style.paddingTop = '1.5rem';
-        details.style.paddingBottom = '1.5rem';
         
         button.classList.add('expanded');
         if (icon) {
             icon.style.transform = 'rotate(180deg)';
         }
-        if (buttonText) {
-            buttonText.textContent = 'Hide Details';
-        }
         
-        console.log('Expanded journey details');
+        console.log('Expanded journey details to height:', scrollHeight);
         
         // Smooth scroll to show expanded content after animation
         setTimeout(() => {
@@ -234,9 +217,10 @@ function initializeJourneyAnimations() {
 document.addEventListener('keydown', function(event) {
     if (event.key === 'Enter' || event.key === ' ') {
         const activeElement = document.activeElement;
-        if (activeElement && activeElement.classList.contains('journey-toggle')) {
+        const journeyCard = activeElement.closest('.journey-card');
+        if (journeyCard) {
             event.preventDefault();
-            toggleJourneyDetails(activeElement);
+            toggleJourneyDetails(journeyCard);
         }
     }
 });
@@ -257,8 +241,5 @@ window.addEventListener('resize', function() {
         }, 10);
     });
 });
-
-// Global function for onclick handlers (backup) - REMOVED AUTO-EXPAND
-window.toggleJourneyDetails = toggleJourneyDetails;
 
 console.log('Journey.js loaded successfully');
