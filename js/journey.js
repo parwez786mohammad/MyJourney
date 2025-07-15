@@ -1,42 +1,84 @@
 // Journey page functionality
 document.addEventListener('DOMContentLoaded', function() {
+    console.log('Journey page loaded');
+    
     // Initialize Lucide icons
     if (typeof lucide !== 'undefined') {
         lucide.createIcons();
+        console.log('Lucide icons initialized');
     }
     
-    initializeJourneyAnimations();
+    // Initialize journey functionality
     initializeJourneyToggles();
+    initializeJourneyAnimations();
 });
 
 // Initialize journey toggle functionality
 function initializeJourneyToggles() {
-    // Set initial state for all details
+    console.log('Initializing journey toggles...');
+    
+    // Set initial state for all details - COLLAPSED
     const allDetails = document.querySelectorAll('.journey-details');
-    allDetails.forEach(details => {
+    const allButtons = document.querySelectorAll('.journey-toggle');
+    
+    console.log(`Found ${allDetails.length} detail sections and ${allButtons.length} toggle buttons`);
+    
+    allDetails.forEach((details, index) => {
+        // Force collapsed state
         details.style.maxHeight = '0';
         details.style.opacity = '0';
         details.style.paddingTop = '0';
         details.style.paddingBottom = '0';
         details.style.overflow = 'hidden';
         details.style.transition = 'all 0.4s ease';
+        details.classList.remove('expanded');
+        
+        console.log(`Detail section ${index} set to collapsed state`);
+    });
+    
+    allButtons.forEach((button, index) => {
+        // Reset button state
+        button.classList.remove('expanded');
+        const buttonText = button.querySelector('span');
+        const buttonIcon = button.querySelector('i');
+        
+        if (buttonText) {
+            buttonText.textContent = 'View Details';
+        }
+        if (buttonIcon) {
+            buttonIcon.style.transform = 'rotate(0deg)';
+        }
+        
+        console.log(`Button ${index} reset to initial state`);
     });
     
     // Add click event listeners to toggle buttons
     const toggleButtons = document.querySelectorAll('.journey-toggle');
-    toggleButtons.forEach(button => {
+    toggleButtons.forEach((button, index) => {
+        // Remove any existing event listeners
+        button.replaceWith(button.cloneNode(true));
+    });
+    
+    // Re-select buttons after cloning (to remove old listeners)
+    const freshButtons = document.querySelectorAll('.journey-toggle');
+    freshButtons.forEach((button, index) => {
         button.addEventListener('click', function(e) {
             e.preventDefault();
             e.stopPropagation();
+            console.log(`Toggle button ${index} clicked`);
             toggleJourneyDetails(this);
         });
+        
+        console.log(`Event listener added to button ${index}`);
     });
     
-    console.log(`Initialized ${toggleButtons.length} journey toggle buttons`);
+    console.log(`Initialized ${freshButtons.length} journey toggle buttons`);
 }
 
 // Toggle journey details function
 function toggleJourneyDetails(button) {
+    console.log('Toggle function called');
+    
     if (!button) {
         console.warn('Toggle button not found');
         return;
@@ -58,6 +100,7 @@ function toggleJourneyDetails(button) {
     }
     
     const isExpanded = details.classList.contains('expanded');
+    console.log(`Current state: ${isExpanded ? 'expanded' : 'collapsed'}`);
     
     // Close all other expanded items first
     const allCards = document.querySelectorAll('.journey-card');
@@ -85,6 +128,8 @@ function toggleJourneyDetails(button) {
                 if (otherButtonText) {
                     otherButtonText.textContent = 'View Details';
                 }
+                
+                console.log('Collapsed other expanded item');
             }
         }
     });
@@ -213,15 +258,7 @@ window.addEventListener('resize', function() {
     });
 });
 
-// Auto-expand first journey item on page load (optional)
-window.addEventListener('load', function() {
-    const firstToggle = document.querySelector('.journey-toggle');
-    if (firstToggle) {
-        setTimeout(() => {
-            toggleJourneyDetails(firstToggle);
-        }, 1500);
-    }
-});
-
-// Global function for onclick handlers (backup)
+// Global function for onclick handlers (backup) - REMOVED AUTO-EXPAND
 window.toggleJourneyDetails = toggleJourneyDetails;
+
+console.log('Journey.js loaded successfully');
