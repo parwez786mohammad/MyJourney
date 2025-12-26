@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Great Leadership Comes Down to Only Two Rules | Parwez Blog</title>
+    <meta name="description" content="Why every project leader should watch this TEDx talk on leadership principles that truly matter.">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #2c5282;
+            --secondary-color: #4a5568;
+            --text-primary: #1a202c;
+            --text-secondary: #4a5568;
+            --text-muted: #718096;
+            --border-color: #e2e8f0;
+            --bg-light: #f7fafc;
+            --bg-white: #ffffff;
+            --accent-color: #3182ce;
+            --link-color: #2b6cb0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-secondary);
+            background-color: var(--bg-light);
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem 1.5rem;
+        }
+
+        header {
+            text-align: center;
+            padding: 3rem 0 2rem;
+        }
+
+        .blog-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            line-height: 1.2;
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+        }
+
+        .blog-subtitle {
+            font-size: 1.4rem;
+            font-weight: 500;
+            color: var(--secondary-color);
+            margin-bottom: 2rem;
+        }
+
+        .blog-meta {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+            font-size: 1rem;
+            color: var(--text-muted);
+        }
+
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .blog-image-container {
+            margin: 2rem 0 3rem;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .blog-image {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .blog-content {
+            background: var(--bg-white);
+            padding: 3rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            margin-bottom: 2rem;
+        }
+
+        .blog-content p {
+            margin-bottom: 1.5rem;
+            font-size: 1.125rem;
+            line-height: 1.8;
+            text-align: justify;
+        }
+
+        .blog-content h2 {
+            font-size: 1.875rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin: 2.5rem 0 1.25rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 3px solid var(--primary-color);
+        }
+
+        .blog-content h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin: 2rem 0 1rem;
+        }
+
+        .blog-content ul {
+            margin: 1.5rem 0;
+            padding-left: 0;
+            list-style: none;
+        }
+
+        .blog-content li {
+            margin-bottom: 1rem;
+            padding-left: 2rem;
+            position: relative;
+            font-size: 1.125rem;
+            line-height: 1.7;
+        }
+
+        .blog-content li::before {
+            content: "•";
+            position: absolute;
+            left: 0.5rem;
+            color: var(--accent-color);
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .blog-content strong {
+            color: var(--text-primary);
+            font-weight: 600;
+        }
+
+        .video-link {
+            display: block;
+            margin: 2rem 0;
+            padding: 1.25rem;
+            background: var(--bg-light);
+            border-left: 4px solid var(--accent-color);
+            border-radius: 6px;
+        }
+
+        .video-link a {
+            color: var(--link-color);
+            text-decoration: none;
+            font-weight: 500;
+            word-break: break-all;
+        }
+
+        .video-link a:hover {
+            text-decoration: underline;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, #667eea 0%, #3182ce 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 10px;
+            margin: 2rem 0;
+            box-shadow: 0 8px 20px rgba(102, 126, 234, 0.2);
+        }
+
+        .highlight-box p {
+            margin-bottom: 0;
+            color: white;
+        }
+
+        .section-box {
+            background: var(--bg-light);
+            padding: 2rem;
+            border-radius: 10px;
+            margin: 2rem 0;
+            border: 1px solid var(--border-color);
+        }
+
+        .section-box h3 {
+            margin-top: 0;
+        }
+
+        .credit-note {
+            font-style: italic;
+            color: var(--text-muted);
+            padding: 1.5rem;
+            background: var(--bg-light);
+            border-radius: 8px;
+            margin-top: 2rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 3rem;
+            border-top: 2px solid var(--border-color);
+        }
+
+        footer p {
+            color: var(--text-muted);
+            font-size: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+
+            .blog-title {
+                font-size: 2rem;
+            }
+
+            .blog-subtitle {
+                font-size: 1.2rem;
+            }
+
+            .blog-meta {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+
+            .blog-content {
+                padding: 2rem 1.5rem;
+            }
+
+            .blog-content h2 {
+                font-size: 1.5rem;
+            }
+
+            .blog-content h3 {
+                font-size: 1.3rem;
+            }
+
+            .blog-content p,
+            .blog-content li {
+                font-size: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .blog-title {
+                font-size: 1.75rem;
+            }
+
+            .blog-subtitle {
+                font-size: 1.1rem;
+            }
+
+            .blog-content {
+                padding: 1.5rem 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 class="blog-title">Great Leadership Comes Down to Only Two Rules</h1>
+            <p class="blog-subtitle">Why Every Project Leader Should Watch This Video</p>
+
+            <div class="blog-meta">
+                <span class="meta-item">
+                    <span>By Parwez</span>
+                </span>
+                <span class="meta-item">
+                    <span>December 26, 2025</span>
+                </span>
+            </div>
+        </header>
+
+        <div class="blog-image-container">
+            <img src="./Blog_10_Image.PNG" alt="Great Leadership" class="blog-image">
+        </div>
+
+        <article class="blog-content">
+            <p>As a Project Manager, the job is not just about timelines, budgets, and dashboards – it is about people, pressure, and constant change. Leadership sits at the heart of all of this. Over time, one idea has become very clear: leadership is actually simple… but it is definitely not easy.</p>
+
+            <p>Recently, a TEDx talk reshaped how I look at leadership on projects and within teams. The talk, "Great leadership comes down to only two rules" by Peter Anderton, distills centuries of leadership thinking into two principles that are powerfully relevant to modern project life. If you lead teams in any capacity, this is a video you should not miss.</p>
+
+            <div class="highlight-box">
+                <p>As I close out 2025 and step into 2026, I want to make a clear commitment to myself: to deliberately practice these simple yet profoundly impactful leadership principles and apply them consistently in my projects and in my day‑to‑day life throughout 2026.</p>
+            </div>
+
+            <div class="video-link">
+                <strong>Watch the talk:</strong> <a href="https://www.youtube.com/watch?v=oDsMlmfLjd4" target="_blank" rel="noopener noreferrer">Great leadership comes down to only two rules | Peter Anderton | TEDxDerby</a>
+            </div>
+
+            <h2>Why this talk hits home for project leaders</h2>
+
+            <p>In project management, certifications, methodologies, and tools matter – Agile boards, Gantt charts, risk logs, and steering decks all have their place. But those alone do not turn a difficult project into a successful one. What truly makes the difference is how you lead the people who bring those plans to life.</p>
+
+            <p>Peter Anderton argues that beneath all the complexity, great leadership rests on just two rules:</p>
+
+            <ul>
+                <li><strong>Rule 1:</strong> It is not about you.</li>
+                <li><strong>Rule 2:</strong> It is only about you.</li>
+            </ul>
+
+            <p>This apparent contradiction is exactly what makes the message so powerful for project managers who are caught between delivery pressure and the reality that they cannot control every variable or every person.</p>
+
+            <h2>Rule #1 – It is not about you</h2>
+
+            <p>The first rule cuts straight through ego and "hero leadership". Leadership is not about your title, your status, or you being the permanent problem‑solver. It is about the people you serve – your team, your stakeholders, and your customers – and how you enable them to succeed.</p>
+
+            <p>In practical project terms, "it is not about you" means:</p>
+
+            <ul>
+                <li>Seeing team members as people, not just resources or role holders.</li>
+                <li>Focusing less on having all the answers and more on building a team that can solve problems without you.</li>
+                <li>Creating conditions where others feel trusted, respected, and safe enough to speak up, take ownership, and even challenge you.</li>
+            </ul>
+
+            <p>When you lead this way, people do not just work for you – they work with you. Motivation, creativity, and accountability start to emerge naturally rather than being forced.</p>
+
+            <h2>Rule #2 – It is only about you</h2>
+
+            <p>The second rule seems to contradict the first, but it is actually the missing half of the picture. While leadership is not about your ego or being the hero, the only thing you truly control is your own behaviour, mindset, and example.</p>
+
+            <p>Anderton often sums this up with a striking idea: every leader gets the team they deserve. If you want your team, culture, or results to change, the starting point is not "them" – it is you.</p>
+
+            <p>Applied to projects, "it is only about you" means:</p>
+
+            <ul>
+                <li>Owning the environment you create through your reactions, communication style, and standards.</li>
+                <li>Modelling what you expect – clarity, integrity, accountability, and calm under pressure.</li>
+                <li>Dropping blame ("they never own anything", "management does not support us") and asking, "What can I change in my leadership to invite a different response?"</li>
+            </ul>
+
+            <p>When you change how you show up, the behaviour of the team around you often begins to shift in response. That is the real power behind Rule 2.</p>
+
+            <h2>How these two rules show up in real project work</h2>
+
+            <p>Here is how these ideas translate directly into project‑management practice:</p>
+
+            <div class="section-box">
+                <h3>Project kick‑off</h3>
+                <p>Instead of diving straight into timelines and scope, invest time to understand your team as people – their strengths, worries, and expectations. This sets a human tone from day one.</p>
+            </div>
+
+            <div class="section-box">
+                <h3>Daily leadership behaviour</h3>
+                <ul>
+                    <li><strong>Ask more, tell less:</strong> invite suggestions before sharing your solution.</li>
+                    <li><strong>Give ownership, not just tasks:</strong> be clear on outcomes and let people shape the "how".</li>
+                    <li><strong>Stay accountable yourself:</strong> admit your mistakes openly and treat them as learning opportunities, not weaknesses.</li>
+                </ul>
+            </div>
+
+            <div class="section-box">
+                <h3>When things go wrong</h3>
+                <p>Every project faces delays, miscommunication, or conflict. In those moments, Rule 1 stops you from making it all about your frustration or ego, and Rule 2 pushes you to ask, "What can I change in my leadership to help us move forward?"</p>
+            </div>
+
+            <p>Over time, these small choices turn a group of individuals into a genuine team that delivers consistently – even under pressure.</p>
+
+            <h2>A personal leadership promise for 2026</h2>
+
+            <p>For me, this talk is more than just a useful leadership model; it feels like a personal challenge. As this year ends and a new one begins, these two rules give a clear lens to evaluate how I show up as a leader at work and in life.</p>
+
+            <p>In 2026, my promise to myself is simple:</p>
+
+            <ul>
+                <li>To remember that it is not about me when I lead projects and teams.</li>
+                <li>To remember that it is only about me when I look for change, improvement, and growth.</li>
+            </ul>
+
+            <p>If you are on your own leadership journey, consider using these same two rules as your checkpoint for the year ahead.</p>
+
+            <div class="credit-note">
+                Courtesy and full credit to Peter Anderton for the concepts and inspiration shared in his TEDx talk "Great leadership comes down to only two rules."
+            </div>
+        </article>
+
+        <footer>
+            <p>&copy; 2025 | Personal Blog by Parwez</p>
+        </footer>
+    </div>
+</body>
+</html>
